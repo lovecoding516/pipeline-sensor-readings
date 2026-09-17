@@ -8,10 +8,10 @@ readings that deviate from the local pressure trend, and shows them to an engine
 - **Frontend** — Vue 3 + TypeScript + Vite, Tailwind CSS v4, Headless UI, Chart.js, axios
 - **Data** — any CSV with the columns `distance_m`, `pressure_bar`, `temperature_c`
 
-The repository ships no readings data, so the app starts empty and invites you to upload a
-CSV; uploading replaces whatever run is loaded. If you drop a `sensor_readings.csv` in the
-repository root it is loaded automatically on the first request, which is how I ran it
-against the provided 400-reading sample — see [Loading a run](#loading-a-run).
+The repository ships a Django fixture of the assignment's 400-reading sample. In
+**development** (the default) it is loaded when the server process starts, so the app
+opens with data. Set `DJANGO_ENV=production` to skip that and start empty. Uploading a
+CSV replaces whatever run is loaded.
 
 ---
 
@@ -32,7 +32,20 @@ source .venv/bin/activate
 
 pip install -r requirements.txt
 python manage.py migrate
+python manage.py runserver          # DJANGO_ENV defaults to dev; loads the sample fixture
+```
+
+Swagger UI is at <http://127.0.0.1:8000/docs/>, ReDoc at <http://127.0.0.1:8000/redoc/>,
+and the OpenAPI schema at <http://127.0.0.1:8000/schema/>.
+
+To start without the sample run:
+
+```bash
+# Windows PowerShell
+$env:DJANGO_ENV = "production"
 python manage.py runserver
+# macOS / Linux
+DJANGO_ENV=production python manage.py runserver
 ```
 
 ### 2. Frontend (http://127.0.0.1:5173)
@@ -48,21 +61,20 @@ Open <http://127.0.0.1:5173>. If your backend is not on `http://127.0.0.1:8000`,
 
 ### Loading a run
 
-No CSV is committed, so the first screen is an empty state with an upload button. Either
-way of loading a run works:
+In development the bundled `sample_run` fixture is loaded on process start (WSGI/ASGI),
+so a fresh `runserver` already has the 400-reading sample. Production (`DJANGO_ENV=production`)
+does not load it. Either way of getting data into a running app:
 
 - **Upload it in the UI** — any CSV with the columns `distance_m`, `pressure_bar`,
-  `temperature_c`. This is the path I would use to review the app.
-- **Have it seeded on startup** — put the file at `sensor_readings.csv` in the repository
-  root (or point `SAMPLE_CSV_PATH` at it) before starting the backend, and the first
-  request loads it and marks the run as the sample. A missing or malformed file here is
-  only logged: the app still starts, just with nothing loaded.
+  `temperature_c`. This replaces the current run.
+- **Reload the sample** — `python manage.py load_sample` replaces the current run with
+  the fixture.
 
 ### Tests and checks
 
 ```bash
 cd backend
-python manage.py test          # 72 tests
+python manage.py test          # 80 tests
 ```
 
 ```bash
@@ -90,6 +102,9 @@ so the frontend has exactly one place to look for something to show the user.
 | `POST` | `/upload`   | Replaces the current run. `multipart/form-data`, field name `file`. |
 | `GET`  | `/readings` | Readings of the current run. Optional `from_m` / `to_m`. |
 | `GET`  | `/summary`  | Min / max / mean pressure, reading count, anomaly count. Same filters. |
+| `GET`  | `/docs`     | Swagger UI. |
+| `GET`  | `/redoc`    | ReDoc. |
+| `GET`  | `/schema`   | OpenAPI 3 schema (YAML). |
 
 `from_m` and `to_m` are inclusive bounds in metres and may be given independently.
 
@@ -193,12 +208,21 @@ more robust; the alternatives I would reach for are in
 seeding command pay for the extra ceremony. SQLite needs no setup and survives a restart,
 which in-memory storage would not.
 
+**The sample run is a Django fixture, loaded only in development.** `DJANGO_ENV`
+defaults to `dev`, and the WSGI/ASGI process loads `sample_run.json` if the database
+is empty. Production (`DJANGO_ENV=production`) skips it, so a deployed app starts
+blank. That replaces request-time middleware, which mixed HTTP handling with
+seeding.
+
 **Each layer has one job.** Query logic lives on a custom `ReadingQuerySet`
 (`in_distance_range`, `anomalous`, `pressure_stats`) and writes on a `RunManager`
 (`current`, `replace`), so the views never assemble filters or aggregates by hand and
-the same vocabulary is reusable from the shell or a management command. Query parameters
-are validated by a serializer rather than hand-rolled `float()` calls. Views raise
-domain exceptions (`InvalidReadingsFile`, `NoRunLoaded`) and a custom DRF exception
+the same vocabulary is reusable from the shell or a management command. Distance
+filters (`from_m` / `to_m`) are a django-filter `FilterSet` that calls
+`in_distance_range`; uploads are validated by a serializer. The read endpoints are
+DRF generic views (`ListAPIView`, `GenericAPIView`) over the current run's `Reading`
+queryset; upload is a `CreateAPIView`.
+Views raise domain exceptions (`InvalidReadingsFile`, `NoRunLoaded`) and a custom DRF exception
 handler renders every error — including field-level validation errors DRF would
 otherwise shape as `{"from_m": [...]}` — as a single `{"detail": "..."}`. That is what
 lets the frontend have exactly one error path.
@@ -258,11 +282,14 @@ backend/
     anomaly.py         the statistical rule
     csv_import.py      parsing and validation of uploads
     models.py          Run / Reading, ReadingQuerySet, RunManager
-    serializers.py     output shapes + query-parameter validation
-    views.py           /upload, /readings, /summary
+    filters.py         FilterSet for the from_m / to_m distance window
+    serializers.py     ModelSerializers and upload validation
+    views.py           CreateAPIView / ListAPIView / GenericAPIView
     exceptions.py      domain errors and the {"detail": ...} handler
-    middleware.py      seeds a root sensor_readings.csv, if present
-    tests/             72 tests
+    sample.py          loads the sample fixture on process start in dev
+    fixtures/
+      sample_run.json  the assignment's 400-reading sample, flags included
+    tests/             80 tests
 frontend/
   eslint.config.js     flat config: vue + typescript + prettier
   .prettierrc.json     formatting, incl. Tailwind class sorting
@@ -301,14 +328,14 @@ frontend/
   `/readings` — a 100 km run at 5 m spacing is 20,000 points, more than a browser chart
   wants at once.
 - **Operational basics**: authentication and per-user run ownership, structured logging,
-  CI running the test suite plus linting (`ruff`, `eslint`), pinned lockfiles, and an
-  `openapi` schema generated from DRF for the frontend client.
+  CI running the test suite plus linting (`ruff`, `eslint`), pinned lockfiles, and
+  locking the OpenAPI schema into the frontend client.
 
 ## Known gaps
 
 Deliberate scope cuts, given that the exercise asks for thinking rather than polish:
 
-- **No frontend tests.** The backend has 72 tests covering the anomaly math, every
+- **No frontend tests.** The backend has 80 tests covering the anomaly math, every
   validation path, the query layer and the API contract, which is where the logic worth
   protecting lives. The frontend is typechecked and linted but has no unit tests; it
   would need Vitest plus a component harness, and `segments.ts` is the piece I would
@@ -324,12 +351,10 @@ Deliberate scope cuts, given that the exercise asks for thinking rather than pol
 - **The UI aims at clarity rather than polish**, as the brief allows. It reflows down to
   a narrow window but has not been designed for mobile, and the chart is not zoomable —
   the distance filter is the way to look closely at a segment.
-- **No data is committed.** The assignment brief and the sample CSV you sent are
-  git-ignored rather than published to a public repository, since they are yours to
-  share, and `db.sqlite3` is ignored too. A clone therefore starts empty: upload a CSV,
-  or drop one in the repository root as described in
-  [Loading a run](#loading-a-run). Every anomaly figure quoted above comes from the
-  provided `sensor_readings.csv`.
+- **The original assignment CSV is git-ignored**, together with the brief and
+  `db.sqlite3`. The sample is published as a Django fixture (`sample_run.json`) so a
+  clone in development can start with data without committing the file you sent. Every
+  anomaly figure quoted above comes from that sample.
 
 ## AI tool usage
 

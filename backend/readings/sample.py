@@ -1,49 +1,42 @@
-"""Loading of the sample run, so the app can open with data.
-
-No CSV is committed to the repository. If one is present at
-``settings.SAMPLE_CSV_PATH`` it is loaded on startup as a convenience; if not,
-the app simply starts empty and waits for an upload.
-"""
+"""Load the bundled sample fixture in development."""
 
 from __future__ import annotations
 
 import logging
 
 from django.conf import settings
+from django.core.management import call_command
+from django.core.management.base import CommandError
+from django.db.utils import DatabaseError, IntegrityError
 
-from .csv_import import CsvValidationError, parse_readings
 from .models import Run
 
 logger = logging.getLogger(__name__)
 
-
-def load_sample() -> Run:
-    """Load the sample CSV as the current run, replacing anything present."""
-    path = settings.SAMPLE_CSV_PATH
-    readings = parse_readings(path.read_bytes())
-    run = Run.objects.replace(path.name, readings, is_sample=True)
-    logger.info("Loaded sample run %s (%d readings)", path.name, len(readings))
-    return run
+SAMPLE_FIXTURE = "sample_run"
 
 
-def load_sample_if_empty() -> Run | None:
-    """Seed the sample run on startup, unless a run is already loaded.
+def load_sample_fixture() -> None:
+    """Replace whatever is loaded with the bundled sample run."""
+    Run.objects.all().delete()
+    call_command("loaddata", SAMPLE_FIXTURE, verbosity=0)
 
-    Startup must not fail because the sample file is missing or unreadable, so
-    problems here are logged and the app comes up with no run loaded.
+
+def load_sample_fixture_if_empty() -> bool:
+    """Load the sample fixture when the database has no run yet.
+
+    Used on process start in development. Production leaves the database
+    empty until something is uploaded. Missing tables (unmigrated) are
+    logged rather than crashing startup.
     """
-    if Run.objects.exists():
-        return None
-
-    path = settings.SAMPLE_CSV_PATH
-    if not path.is_file():
-        logger.warning(
-            "Sample CSV not found at %s; starting with no run loaded.", path
-        )
-        return None
-
+    if not getattr(settings, "LOAD_SAMPLE_FIXTURE", False):
+        return False
     try:
-        return load_sample()
-    except (CsvValidationError, OSError) as exc:
-        logger.warning("Could not load sample CSV %s: %s", path, exc)
-        return None
+        if Run.objects.exists():
+            return False
+        call_command("loaddata", SAMPLE_FIXTURE, verbosity=0)
+    except (DatabaseError, IntegrityError, CommandError) as exc:
+        logger.warning("Could not load sample fixture: %s", exc)
+        return False
+    logger.info("Loaded sample fixture %s", SAMPLE_FIXTURE)
+    return True

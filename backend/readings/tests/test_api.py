@@ -1,10 +1,9 @@
-from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import TestCase, override_settings
 
 from readings.csv_import import parse_readings
-from readings.middleware import SampleRunMiddleware
 from readings.models import Reading, Run
+from readings.sample import load_sample_fixture_if_empty
 
 HEADER = "distance_m,pressure_bar,temperature_c"
 
@@ -40,6 +39,7 @@ class NoRunLoadedTests(TestCase):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
         self.assertIn("GET /readings", response.json()["endpoints"])
+        self.assertIn("GET /docs", response.json()["endpoints"])
 
 
 class UploadTests(TestCase):
@@ -208,26 +208,26 @@ class SummaryTests(TestCase):
         self.assertEqual(body["run"]["distance_range"], {"from_m": 0, "to_m": 100})
 
 
-@override_settings(LOAD_SAMPLE_ON_FIRST_REQUEST=True)
+@override_settings(LOAD_SAMPLE_FIXTURE=True)
 class SampleSeedingTests(TestCase):
-    def setUp(self):
-        SampleRunMiddleware._loaded = False
-        self.addCleanup(setattr, SampleRunMiddleware, "_loaded", False)
-
-    def test_first_request_loads_the_sample_run(self):
+    def test_loads_the_sample_when_empty(self):
+        self.assertTrue(load_sample_fixture_if_empty())
         body = self.client.get("/readings").json()
-
-        self.assertEqual(body["run"]["filename"], settings.SAMPLE_CSV_PATH.name)
+        self.assertEqual(body["run"]["filename"], "sensor_readings.csv")
         self.assertTrue(body["run"]["is_sample"])
         self.assertEqual(body["count"], 400)
 
-    def test_seeding_does_not_overwrite_an_uploaded_run(self):
+    def test_does_not_overwrite_an_uploaded_run(self):
         Run.objects.replace("mine.csv", parse_readings(b"\n".join(
             [HEADER.encode()] + [line.encode() for line in calm_lines(5)]
         )))
-        SampleRunMiddleware._loaded = False
-
+        self.assertFalse(load_sample_fixture_if_empty())
         self.assertEqual(self.client.get("/readings").json()["run"]["filename"], "mine.csv")
+
+    def test_production_does_not_load_the_fixture(self):
+        with override_settings(LOAD_SAMPLE_FIXTURE=False):
+            self.assertFalse(load_sample_fixture_if_empty())
+        self.assertEqual(Run.objects.count(), 0)
 
 
 class SampleDataTests(TestCase):
@@ -237,13 +237,7 @@ class SampleDataTests(TestCase):
     data, including where it under-reports: see the README for the discussion.
     """
 
-    @classmethod
-    def setUpTestData(cls):
-        Run.objects.replace(
-            settings.SAMPLE_CSV_PATH.name,
-            parse_readings(settings.SAMPLE_CSV_PATH.read_bytes()),
-            is_sample=True,
-        )
+    fixtures = ["sample_run"]
 
     def test_sample_shape(self):
         body = self.client.get("/summary").json()
@@ -270,3 +264,17 @@ class SampleDataTests(TestCase):
         self.assertTrue(flagged[1220])
         self.assertFalse(flagged[1225])
         self.assertFalse(flagged[1240])
+
+
+class SchemaTests(TestCase):
+    def test_openapi_schema_lists_the_endpoints(self):
+        response = self.client.get("/schema/")
+        self.assertEqual(response.status_code, 200)
+        schema = response.content.decode()
+        self.assertIn("openapi", schema)
+        self.assertIn("/readings", schema)
+        self.assertIn("/upload", schema)
+        self.assertIn("/summary", schema)
+
+    def test_swagger_ui_is_served(self):
+        self.assertEqual(self.client.get("/docs/").status_code, 200)

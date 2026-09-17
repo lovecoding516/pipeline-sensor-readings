@@ -1,18 +1,21 @@
 from django.core.management.base import BaseCommand, CommandError
+from django.db.utils import DatabaseError, IntegrityError
 
-from readings.csv_import import CsvValidationError
-from readings.sample import load_sample
+from readings.sample import load_sample_fixture
 
 
 class Command(BaseCommand):
-    help = "Load the bundled sample CSV as the current run, replacing any existing one."
+    help = "Load the bundled sample fixture as the current run, replacing any existing one."
 
     def handle(self, *args, **options):
         try:
-            run = load_sample()
-        except (CsvValidationError, OSError) as exc:
+            load_sample_fixture()
+        except (DatabaseError, IntegrityError, CommandError) as exc:
             raise CommandError(str(exc)) from exc
 
+        from readings.models import Run
+
+        run = Run.objects.current()
         self.stdout.write(
             self.style.SUCCESS(
                 f"Loaded {run.filename}: {run.readings.count()} readings, "

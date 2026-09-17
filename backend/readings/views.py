@@ -1,26 +1,55 @@
 """The three endpoints the assignment asks for.
 
-The views stay thin on purpose: query logic lives on `ReadingQuerySet`, writes
-on `RunManager`, parsing in `csv_import`, and error rendering in `exceptions`.
+Upload, list and summary are DRF generic views bound to `Run` / `Reading`.
+Query logic stays on `ReadingQuerySet`, writes on `RunManager`.
 """
 
 from __future__ import annotations
 
-from rest_framework import status
+from drf_spectacular.utils import OpenApiParameter, extend_schema
+from rest_framework import generics, status
+from rest_framework.exceptions import ValidationError
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .csv_import import CsvValidationError, parse_readings
-from .exceptions import InvalidReadingsFile, NoRunLoaded
-from .models import ReadingQuerySet, Run
-from .serializers import DistanceRangeSerializer, ReadingSerializer, RunSerializer
+from .exceptions import NoRunLoaded
+from .filters import ReadingFilter
+from .models import Reading, Run
+from .serializers import (
+    ErrorSerializer,
+    IndexSerializer,
+    ReadingsResponseSerializer,
+    ReadingSerializer,
+    RunSerializer,
+    SummaryResponseSerializer,
+    UploadResponseSerializer,
+    UploadSerializer,
+)
+
+DISTANCE_PARAMETERS = [
+    OpenApiParameter(
+        name="from_m",
+        type=float,
+        location=OpenApiParameter.QUERY,
+        required=False,
+        description="Inclusive start of the distance window, in metres.",
+    ),
+    OpenApiParameter(
+        name="to_m",
+        type=float,
+        location=OpenApiParameter.QUERY,
+        required=False,
+        description="Inclusive end of the distance window, in metres.",
+    ),
+]
 
 
 class IndexView(APIView):
     """Endpoint listing, so the API root is not a 404 when opened in a browser."""
 
+    @extend_schema(responses=IndexSerializer)
     def get(self, _request: Request) -> Response:
         return Response(
             {
@@ -31,80 +60,103 @@ class IndexView(APIView):
                                      "?from_m=&to_m= distance filter.",
                     "GET /summary": "Pressure statistics for the (optionally "
                                     "filtered) range.",
+                    "GET /docs": "Swagger UI for this API.",
+                    "GET /schema": "OpenAPI 3 schema.",
                 }
             }
         )
 
 
-class UploadView(APIView):
+class UploadView(generics.CreateAPIView):
+    serializer_class = UploadSerializer
     parser_classes = [MultiPartParser, FormParser]
 
-    def post(self, request: Request) -> Response:
-        uploaded = request.FILES.get("file")
-        if uploaded is None:
-            raise InvalidReadingsFile(
-                "No file was uploaded. Send the CSV as multipart/form-data "
-                "under the field name 'file'."
-            )
-
-        try:
-            readings = parse_readings(uploaded.read())
-        except CsvValidationError as exc:
-            # Nothing has been written yet, so the previously loaded run survives.
-            raise InvalidReadingsFile(str(exc)) from exc
-        except OSError as exc:
-            raise InvalidReadingsFile(
-                "The uploaded file could not be read. Please try again."
-            ) from exc
-
-        run = Run.objects.replace(uploaded.name or "upload.csv", readings)
+    @extend_schema(
+        request=UploadSerializer,
+        responses={
+            201: UploadResponseSerializer,
+            400: ErrorSerializer,
+        },
+    )
+    def create(self, request: Request, *args, **kwargs) -> Response:
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        run = serializer.save()
         return Response(
             {"run": RunSerializer(run).data}, status=status.HTTP_201_CREATED
         )
 
 
-class CurrentRunView(APIView):
-    """Shared plumbing for the two read endpoints."""
+class CurrentRunMixin:
+    """Shared queryset for the two read endpoints: the current run's readings."""
+
+    filterset_class = ReadingFilter
 
     def get_run(self) -> Run:
-        run = Run.objects.current()
+        run = getattr(self, "_run", None)
         if run is None:
-            raise NoRunLoaded()
+            run = Run.objects.current()
+            if run is None:
+                raise NoRunLoaded()
+            self._run = run
         return run
 
-    def get_distance_range(self, request: Request) -> dict[str, float | None]:
-        serializer = DistanceRangeSerializer(data=request.query_params)
-        serializer.is_valid(raise_exception=True)
-        return serializer.validated_data
+    def get_queryset(self):
+        if getattr(self, "swagger_fake_view", False):
+            return Reading.objects.none()
+        return self.get_run().readings.all()
 
-    def get_readings(
-        self, request: Request
-    ) -> tuple[Run, dict[str, float | None], ReadingQuerySet]:
-        run = self.get_run()
-        distance_range = self.get_distance_range(request)
-        return run, distance_range, run.readings.in_distance_range(**distance_range)
+    def filter_queryset(self, queryset):
+        filterset = self.filterset_class(
+            data=self.request.query_params,
+            queryset=queryset,
+            request=self.request,
+        )
+        if not filterset.is_valid():
+            raise ValidationError(filterset.errors)
+        self.distance_range = filterset.applied_range()
+        return filterset.qs
 
 
-class ReadingsView(CurrentRunView):
-    def get(self, request: Request) -> Response:
-        run, distance_range, readings = self.get_readings(request)
+class ReadingsView(CurrentRunMixin, generics.ListAPIView):
+    serializer_class = ReadingSerializer
+
+    @extend_schema(
+        parameters=DISTANCE_PARAMETERS,
+        responses={
+            200: ReadingsResponseSerializer,
+            400: ErrorSerializer,
+            404: ErrorSerializer,
+        },
+    )
+    def list(self, request: Request, *args, **kwargs) -> Response:
+        readings = self.filter_queryset(self.get_queryset())
         return Response(
             {
-                "run": RunSerializer(run).data,
-                "filter": distance_range,
+                "run": RunSerializer(self.get_run()).data,
+                "filter": self.distance_range,
                 "count": readings.count(),
-                "readings": ReadingSerializer(readings, many=True).data,
+                "readings": self.get_serializer(readings, many=True).data,
             }
         )
 
 
-class SummaryView(CurrentRunView):
-    def get(self, request: Request) -> Response:
-        run, distance_range, readings = self.get_readings(request)
+class SummaryView(CurrentRunMixin, generics.GenericAPIView):
+    serializer_class = ReadingSerializer
+    @extend_schema(
+        parameters=DISTANCE_PARAMETERS,
+        responses={
+            200: SummaryResponseSerializer,
+            400: ErrorSerializer,
+            404: ErrorSerializer,
+        },
+    )
+    def get(self, request: Request, *args, **kwargs) -> Response:
+        readings = self.filter_queryset(self.get_queryset())
         return Response(
             {
-                "run": RunSerializer(run).data,
-                "filter": distance_range,
+                "run": RunSerializer(self.get_run()).data,
+                "filter": self.distance_range,
                 **readings.pressure_stats(),
             }
         )

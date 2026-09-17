@@ -1,0 +1,5211 @@
+[
+  {
+    "model": "readings.run",
+    "pk": 1,
+    "fields": {
+      "filename": "sensor_readings.csv",
+      "uploaded_at": "2026-01-01T00:00:00Z",
+      "is_sample": true
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 1,
+    "fields": {
+      "run": 1,
+      "distance_m": 0,
+      "pressure_bar": 41.95,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": null,
+      "baseline_std": null
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 2,
+    "fields": {
+      "run": 1,
+      "distance_m": 5,
+      "pressure_bar": 41.99,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": null,
+      "baseline_std": null
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 3,
+    "fields": {
+      "run": 1,
+      "distance_m": 10,
+      "pressure_bar": 42.01,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 41.97,
+      "baseline_std": 0.028284271247461298
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 4,
+    "fields": {
+      "run": 1,
+      "distance_m": 15,
+      "pressure_bar": 42.19,
+      "temperature_c": 18.0,
+      "anomaly": true,
+      "baseline_mean": 41.983333333333334,
+      "baseline_std": 0.030550504633036733
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 5,
+    "fields": {
+      "run": 1,
+      "distance_m": 20,
+      "pressure_bar": 42.02,
+      "temperature_c": 18.1,
+      "anomaly": false,
+      "baseline_mean": 42.035,
+      "baseline_std": 0.10630145812734451
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 6,
+    "fields": {
+      "run": 1,
+      "distance_m": 25,
+      "pressure_bar": 42.21,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 42.032,
+      "baseline_std": 0.0923038460737128
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 7,
+    "fields": {
+      "run": 1,
+      "distance_m": 30,
+      "pressure_bar": 42.38,
+      "temperature_c": 18.2,
+      "anomaly": true,
+      "baseline_mean": 42.06166666666667,
+      "baseline_std": 0.10998484744121076
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 8,
+    "fields": {
+      "run": 1,
+      "distance_m": 35,
+      "pressure_bar": 41.92,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 42.107142857142854,
+      "baseline_std": 0.15670718827527602
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 9,
+    "fields": {
+      "run": 1,
+      "distance_m": 40,
+      "pressure_bar": 42.29,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.08375,
+      "baseline_std": 0.15945778662168128
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 10,
+    "fields": {
+      "run": 1,
+      "distance_m": 45,
+      "pressure_bar": 42.24,
+      "temperature_c": 18.2,
+      "anomaly": false,
+      "baseline_mean": 42.10666666666667,
+      "baseline_std": 0.16424067705656795
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 11,
+    "fields": {
+      "run": 1,
+      "distance_m": 50,
+      "pressure_bar": 42.43,
+      "temperature_c": 17.6,
+      "anomaly": false,
+      "baseline_mean": 42.12,
+      "baseline_std": 0.16048537489614262
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 12,
+    "fields": {
+      "run": 1,
+      "distance_m": 55,
+      "pressure_bar": 42.16,
+      "temperature_c": 18.4,
+      "anomaly": false,
+      "baseline_mean": 42.14818181818182,
+      "baseline_std": 0.17865151450901126
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 13,
+    "fields": {
+      "run": 1,
+      "distance_m": 60,
+      "pressure_bar": 42.6,
+      "temperature_c": 18.2,
+      "anomaly": true,
+      "baseline_mean": 42.149166666666666,
+      "baseline_std": 0.17037169703772687
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 14,
+    "fields": {
+      "run": 1,
+      "distance_m": 65,
+      "pressure_bar": 42.45,
+      "temperature_c": 18.4,
+      "anomaly": false,
+      "baseline_mean": 42.183846153846154,
+      "baseline_std": 0.2055293353570424
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 15,
+    "fields": {
+      "run": 1,
+      "distance_m": 70,
+      "pressure_bar": 42.62,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": 42.20285714285715,
+      "baseline_std": 0.2098874633053324
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 16,
+    "fields": {
+      "run": 1,
+      "distance_m": 75,
+      "pressure_bar": 42.57,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 42.23066666666667,
+      "baseline_std": 0.2291433321453332
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 17,
+    "fields": {
+      "run": 1,
+      "distance_m": 80,
+      "pressure_bar": 41.48,
+      "temperature_c": 18.1,
+      "anomaly": true,
+      "baseline_mean": 42.251875,
+      "baseline_std": 0.23707154335066555
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 18,
+    "fields": {
+      "run": 1,
+      "distance_m": 85,
+      "pressure_bar": 42.1,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.20647058823529,
+      "baseline_std": 0.2962039241905524
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 19,
+    "fields": {
+      "run": 1,
+      "distance_m": 90,
+      "pressure_bar": 42.68,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": 42.20055555555555,
+      "baseline_std": 0.28845373208810404
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 20,
+    "fields": {
+      "run": 1,
+      "distance_m": 95,
+      "pressure_bar": 42.76,
+      "temperature_c": 18.0,
+      "anomaly": false,
+      "baseline_mean": 42.22578947368421,
+      "baseline_std": 0.3011333368288999
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 21,
+    "fields": {
+      "run": 1,
+      "distance_m": 100,
+      "pressure_bar": 42.46,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 42.2525,
+      "baseline_std": 0.3165085015903164
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 22,
+    "fields": {
+      "run": 1,
+      "distance_m": 105,
+      "pressure_bar": 42.55,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 42.278,
+      "baseline_std": 0.31135696217482745
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 23,
+    "fields": {
+      "run": 1,
+      "distance_m": 110,
+      "pressure_bar": 42.76,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 42.306,
+      "baseline_std": 0.30926738558967665
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 24,
+    "fields": {
+      "run": 1,
+      "distance_m": 115,
+      "pressure_bar": 42.79,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.3435,
+      "baseline_std": 0.31686415817640534
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 25,
+    "fields": {
+      "run": 1,
+      "distance_m": 120,
+      "pressure_bar": 42.36,
+      "temperature_c": 18.2,
+      "anomaly": false,
+      "baseline_mean": 42.3735,
+      "baseline_std": 0.3297092020170755
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 26,
+    "fields": {
+      "run": 1,
+      "distance_m": 125,
+      "pressure_bar": 42.44,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.390499999999996,
+      "baseline_std": 0.319118440312321
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 27,
+    "fields": {
+      "run": 1,
+      "distance_m": 130,
+      "pressure_bar": 42.54,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.402,
+      "baseline_std": 0.3164041386381796
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 28,
+    "fields": {
+      "run": 1,
+      "distance_m": 135,
+      "pressure_bar": 42.37,
+      "temperature_c": 18.2,
+      "anomaly": false,
+      "baseline_mean": 42.410000000000004,
+      "baseline_std": 0.3178380918511482
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 29,
+    "fields": {
+      "run": 1,
+      "distance_m": 140,
+      "pressure_bar": 42.94,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.4325,
+      "baseline_std": 0.2965392491994771
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 30,
+    "fields": {
+      "run": 1,
+      "distance_m": 145,
+      "pressure_bar": 42.87,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.464999999999996,
+      "baseline_std": 0.3151357268159063
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 31,
+    "fields": {
+      "run": 1,
+      "distance_m": 150,
+      "pressure_bar": 43.22,
+      "temperature_c": 18.6,
+      "anomaly": true,
+      "baseline_mean": 42.4965,
+      "baseline_std": 0.32285364127451094
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 32,
+    "fields": {
+      "run": 1,
+      "distance_m": 155,
+      "pressure_bar": 42.24,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 42.536,
+      "baseline_std": 0.36042956827126515
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 33,
+    "fields": {
+      "run": 1,
+      "distance_m": 160,
+      "pressure_bar": 43.1,
+      "temperature_c": 18.1,
+      "anomaly": false,
+      "baseline_mean": 42.54,
+      "baseline_std": 0.3564591952730869
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 34,
+    "fields": {
+      "run": 1,
+      "distance_m": 165,
+      "pressure_bar": 42.8,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 42.565,
+      "baseline_std": 0.3777843996667662
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 35,
+    "fields": {
+      "run": 1,
+      "distance_m": 170,
+      "pressure_bar": 42.69,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.582499999999996,
+      "baseline_std": 0.3802751773733276
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 36,
+    "fields": {
+      "run": 1,
+      "distance_m": 175,
+      "pressure_bar": 43.03,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 42.586,
+      "baseline_std": 0.38096000618934983
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 37,
+    "fields": {
+      "run": 1,
+      "distance_m": 180,
+      "pressure_bar": 43.06,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 42.608999999999995,
+      "baseline_std": 0.3936188378033809
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 38,
+    "fields": {
+      "run": 1,
+      "distance_m": 185,
+      "pressure_bar": 42.67,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 42.688,
+      "baseline_std": 0.3032907238243443
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 39,
+    "fields": {
+      "run": 1,
+      "distance_m": 190,
+      "pressure_bar": 43.22,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 42.716499999999996,
+      "baseline_std": 0.27009306388334897
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 40,
+    "fields": {
+      "run": 1,
+      "distance_m": 195,
+      "pressure_bar": 42.88,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 42.7435,
+      "baseline_std": 0.29232777205696614
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 41,
+    "fields": {
+      "run": 1,
+      "distance_m": 200,
+      "pressure_bar": 42.67,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.7495,
+      "baseline_std": 0.2939114617847034
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 42,
+    "fields": {
+      "run": 1,
+      "distance_m": 205,
+      "pressure_bar": 42.3,
+      "temperature_c": 18.4,
+      "anomaly": false,
+      "baseline_mean": 42.760000000000005,
+      "baseline_std": 0.28668706577767106
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 43,
+    "fields": {
+      "run": 1,
+      "distance_m": 210,
+      "pressure_bar": 42.77,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 42.7475,
+      "baseline_std": 0.30139805817835724
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 44,
+    "fields": {
+      "run": 1,
+      "distance_m": 215,
+      "pressure_bar": 43.4,
+      "temperature_c": 18.9,
+      "anomaly": true,
+      "baseline_mean": 42.748000000000005,
+      "baseline_std": 0.3014281794531183
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 45,
+    "fields": {
+      "run": 1,
+      "distance_m": 220,
+      "pressure_bar": 43.1,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.778499999999994,
+      "baseline_std": 0.33490414968119514
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 46,
+    "fields": {
+      "run": 1,
+      "distance_m": 225,
+      "pressure_bar": 43.4,
+      "temperature_c": 19.3,
+      "anomaly": false,
+      "baseline_mean": 42.8155,
+      "baseline_std": 0.32701963565704023
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 47,
+    "fields": {
+      "run": 1,
+      "distance_m": 230,
+      "pressure_bar": 43.14,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 42.8635,
+      "baseline_std": 0.3392293898638036
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 48,
+    "fields": {
+      "run": 1,
+      "distance_m": 235,
+      "pressure_bar": 43.37,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.8935,
+      "baseline_std": 0.33562628025826585
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 49,
+    "fields": {
+      "run": 1,
+      "distance_m": 240,
+      "pressure_bar": 43.51,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.9435,
+      "baseline_std": 0.327932518732292
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 50,
+    "fields": {
+      "run": 1,
+      "distance_m": 245,
+      "pressure_bar": 43.78,
+      "temperature_c": 18.9,
+      "anomaly": true,
+      "baseline_mean": 42.972,
+      "baseline_std": 0.35153198551782583
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 51,
+    "fields": {
+      "run": 1,
+      "distance_m": 250,
+      "pressure_bar": 43.67,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 43.0175,
+      "baseline_std": 0.39396600173912916
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 52,
+    "fields": {
+      "run": 1,
+      "distance_m": 255,
+      "pressure_bar": 42.95,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 43.04,
+      "baseline_std": 0.41824193451813696
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 53,
+    "fields": {
+      "run": 1,
+      "distance_m": 260,
+      "pressure_bar": 43.09,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.0755,
+      "baseline_std": 0.37462226589628
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 54,
+    "fields": {
+      "run": 1,
+      "distance_m": 265,
+      "pressure_bar": 43.45,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 43.075,
+      "baseline_std": 0.37459451762082546
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 55,
+    "fields": {
+      "run": 1,
+      "distance_m": 270,
+      "pressure_bar": 42.34,
+      "temperature_c": 19.4,
+      "anomaly": true,
+      "baseline_mean": 43.1075,
+      "baseline_std": 0.3776642201187381
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 56,
+    "fields": {
+      "run": 1,
+      "distance_m": 275,
+      "pressure_bar": 43.38,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 43.09,
+      "baseline_std": 0.405138053143941
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 57,
+    "fields": {
+      "run": 1,
+      "distance_m": 280,
+      "pressure_bar": 42.99,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 43.1075,
+      "baseline_std": 0.40994062471225434
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 58,
+    "fields": {
+      "run": 1,
+      "distance_m": 285,
+      "pressure_bar": 43.82,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 43.104,
+      "baseline_std": 0.41066569833560895
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 59,
+    "fields": {
+      "run": 1,
+      "distance_m": 290,
+      "pressure_bar": 43.08,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.161500000000004,
+      "baseline_std": 0.4268892990977991
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 60,
+    "fields": {
+      "run": 1,
+      "distance_m": 295,
+      "pressure_bar": 43.09,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 43.1545,
+      "baseline_std": 0.4270273626139809
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 61,
+    "fields": {
+      "run": 1,
+      "distance_m": 300,
+      "pressure_bar": 43.3,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 43.165000000000006,
+      "baseline_std": 0.4224801459053552
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 62,
+    "fields": {
+      "run": 1,
+      "distance_m": 305,
+      "pressure_bar": 43.35,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 43.1965,
+      "baseline_std": 0.4068269385067028
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 63,
+    "fields": {
+      "run": 1,
+      "distance_m": 310,
+      "pressure_bar": 43.6,
+      "temperature_c": 19.3,
+      "anomaly": false,
+      "baseline_mean": 43.249,
+      "baseline_std": 0.34863493196963646
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 64,
+    "fields": {
+      "run": 1,
+      "distance_m": 315,
+      "pressure_bar": 44.1,
+      "temperature_c": 19.4,
+      "anomaly": true,
+      "baseline_mean": 43.2905,
+      "baseline_std": 0.3378488450553926
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 65,
+    "fields": {
+      "run": 1,
+      "distance_m": 320,
+      "pressure_bar": 43.79,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 43.3255,
+      "baseline_std": 0.3830277576859076
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 66,
+    "fields": {
+      "run": 1,
+      "distance_m": 325,
+      "pressure_bar": 43.28,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.36,
+      "baseline_std": 0.3926026516788478
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 67,
+    "fields": {
+      "run": 1,
+      "distance_m": 330,
+      "pressure_bar": 43.95,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 43.354,
+      "baseline_std": 0.3928760350891461
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 68,
+    "fields": {
+      "run": 1,
+      "distance_m": 335,
+      "pressure_bar": 43.69,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 43.3945,
+      "baseline_std": 0.4109869379407262
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 69,
+    "fields": {
+      "run": 1,
+      "distance_m": 340,
+      "pressure_bar": 43.9,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.4105,
+      "baseline_std": 0.416179048006984
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 70,
+    "fields": {
+      "run": 1,
+      "distance_m": 345,
+      "pressure_bar": 43.39,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 43.43,
+      "baseline_std": 0.4299938800054074
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 71,
+    "fields": {
+      "run": 1,
+      "distance_m": 350,
+      "pressure_bar": 42.94,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.4105,
+      "baseline_std": 0.42205605763864246
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 72,
+    "fields": {
+      "run": 1,
+      "distance_m": 355,
+      "pressure_bar": 43.32,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 43.374,
+      "baseline_std": 0.4299253301140603
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 73,
+    "fields": {
+      "run": 1,
+      "distance_m": 360,
+      "pressure_bar": 43.18,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 43.3925,
+      "baseline_std": 0.4185296946014196
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 74,
+    "fields": {
+      "run": 1,
+      "distance_m": 365,
+      "pressure_bar": 42.86,
+      "temperature_c": 19.3,
+      "anomaly": false,
+      "baseline_mean": 43.397000000000006,
+      "baseline_std": 0.4155794939472753
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 75,
+    "fields": {
+      "run": 1,
+      "distance_m": 370,
+      "pressure_bar": 43.51,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.3675,
+      "baseline_std": 0.43222648789969487
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 76,
+    "fields": {
+      "run": 1,
+      "distance_m": 375,
+      "pressure_bar": 43.93,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.426,
+      "baseline_std": 0.35877569594385866
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 77,
+    "fields": {
+      "run": 1,
+      "distance_m": 380,
+      "pressure_bar": 43.04,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.453500000000005,
+      "baseline_std": 0.37574172260378974
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 78,
+    "fields": {
+      "run": 1,
+      "distance_m": 385,
+      "pressure_bar": 43.62,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.456,
+      "baseline_std": 0.37264912239404624
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 79,
+    "fields": {
+      "run": 1,
+      "distance_m": 390,
+      "pressure_bar": 43.2,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 43.446,
+      "baseline_std": 0.3649715201578282
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 80,
+    "fields": {
+      "run": 1,
+      "distance_m": 395,
+      "pressure_bar": 43.48,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.452,
+      "baseline_std": 0.3595845556076887
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 81,
+    "fields": {
+      "run": 1,
+      "distance_m": 400,
+      "pressure_bar": 43.9,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.4715,
+      "baseline_std": 0.3493493953050444
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 82,
+    "fields": {
+      "run": 1,
+      "distance_m": 405,
+      "pressure_bar": 43.56,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 43.5015,
+      "baseline_std": 0.35946268381103436
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 83,
+    "fields": {
+      "run": 1,
+      "distance_m": 410,
+      "pressure_bar": 43.55,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.512,
+      "baseline_std": 0.3578679556543316
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 84,
+    "fields": {
+      "run": 1,
+      "distance_m": 415,
+      "pressure_bar": 43.51,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 43.509499999999996,
+      "baseline_std": 0.35739518154204847
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 85,
+    "fields": {
+      "run": 1,
+      "distance_m": 420,
+      "pressure_bar": 43.52,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.480000000000004,
+      "baseline_std": 0.32933745291833544
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 86,
+    "fields": {
+      "run": 1,
+      "distance_m": 425,
+      "pressure_bar": 43.9,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 43.4665,
+      "baseline_std": 0.32139948907698557
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 87,
+    "fields": {
+      "run": 1,
+      "distance_m": 430,
+      "pressure_bar": 42.88,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.4975,
+      "baseline_std": 0.3321837633473059
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 88,
+    "fields": {
+      "run": 1,
+      "distance_m": 435,
+      "pressure_bar": 43.57,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 43.444,
+      "baseline_std": 0.3415044116228872
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 89,
+    "fields": {
+      "run": 1,
+      "distance_m": 440,
+      "pressure_bar": 43.8,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.438,
+      "baseline_std": 0.33799096842495924
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 90,
+    "fields": {
+      "run": 1,
+      "distance_m": 445,
+      "pressure_bar": 43.15,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.433,
+      "baseline_std": 0.3314735839280483
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 91,
+    "fields": {
+      "run": 1,
+      "distance_m": 450,
+      "pressure_bar": 43.43,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 43.421,
+      "baseline_std": 0.337403397480788
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 92,
+    "fields": {
+      "run": 1,
+      "distance_m": 455,
+      "pressure_bar": 43.66,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.445499999999996,
+      "baseline_std": 0.3178625157947505
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 93,
+    "fields": {
+      "run": 1,
+      "distance_m": 460,
+      "pressure_bar": 43.24,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.4625,
+      "baseline_std": 0.3198827910344655
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 94,
+    "fields": {
+      "run": 1,
+      "distance_m": 465,
+      "pressure_bar": 43.67,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.4655,
+      "baseline_std": 0.3173653879579241
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 95,
+    "fields": {
+      "run": 1,
+      "distance_m": 470,
+      "pressure_bar": 43.64,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 43.506,
+      "baseline_std": 0.2861799213229687
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 96,
+    "fields": {
+      "run": 1,
+      "distance_m": 475,
+      "pressure_bar": 43.25,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.5125,
+      "baseline_std": 0.2877476050474197
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 97,
+    "fields": {
+      "run": 1,
+      "distance_m": 480,
+      "pressure_bar": 39.56,
+      "temperature_c": 20.7,
+      "anomaly": true,
+      "baseline_mean": 43.4785,
+      "baseline_std": 0.2757434925509758
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 98,
+    "fields": {
+      "run": 1,
+      "distance_m": 485,
+      "pressure_bar": 39.27,
+      "temperature_c": 19.6,
+      "anomaly": true,
+      "baseline_mean": 43.304500000000004,
+      "baseline_std": 0.9177058065460955
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 99,
+    "fields": {
+      "run": 1,
+      "distance_m": 490,
+      "pressure_bar": 38.99,
+      "temperature_c": 19.8,
+      "anomaly": true,
+      "baseline_mean": 43.087,
+      "baseline_std": 1.2821244705155324
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 100,
+    "fields": {
+      "run": 1,
+      "distance_m": 495,
+      "pressure_bar": 38.99,
+      "temperature_c": 19.9,
+      "anomaly": true,
+      "baseline_mean": 42.8765,
+      "baseline_std": 1.5747924675300775
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 101,
+    "fields": {
+      "run": 1,
+      "distance_m": 500,
+      "pressure_bar": 38.84,
+      "temperature_c": 19.8,
+      "anomaly": true,
+      "baseline_mean": 42.652,
+      "baseline_std": 1.7896209536923546
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 102,
+    "fields": {
+      "run": 1,
+      "distance_m": 505,
+      "pressure_bar": 43.56,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.399,
+      "baseline_std": 1.9540212249022313
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 103,
+    "fields": {
+      "run": 1,
+      "distance_m": 510,
+      "pressure_bar": 44.19,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 42.399,
+      "baseline_std": 1.9540212249022313
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 104,
+    "fields": {
+      "run": 1,
+      "distance_m": 515,
+      "pressure_bar": 44.09,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.431,
+      "baseline_std": 1.9789441629313331
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 105,
+    "fields": {
+      "run": 1,
+      "distance_m": 520,
+      "pressure_bar": 43.58,
+      "temperature_c": 21.1,
+      "anomaly": false,
+      "baseline_mean": 42.46,
+      "baseline_std": 1.999728928998548
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 106,
+    "fields": {
+      "run": 1,
+      "distance_m": 525,
+      "pressure_bar": 43.17,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.463,
+      "baseline_std": 2.00144710804852
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 107,
+    "fields": {
+      "run": 1,
+      "distance_m": 530,
+      "pressure_bar": 43.28,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.4265,
+      "baseline_std": 1.9804073876484674
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 108,
+    "fields": {
+      "run": 1,
+      "distance_m": 535,
+      "pressure_bar": 43.71,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 42.4465,
+      "baseline_std": 1.9872363115378937
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 109,
+    "fields": {
+      "run": 1,
+      "distance_m": 540,
+      "pressure_bar": 43.37,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.453500000000005,
+      "baseline_std": 1.991643793453035
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 110,
+    "fields": {
+      "run": 1,
+      "distance_m": 545,
+      "pressure_bar": 43.3,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 42.432,
+      "baseline_std": 1.9786215297258676
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 111,
+    "fields": {
+      "run": 1,
+      "distance_m": 550,
+      "pressure_bar": 43.61,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 42.439499999999995,
+      "baseline_std": 1.9817681499105781
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 112,
+    "fields": {
+      "run": 1,
+      "distance_m": 555,
+      "pressure_bar": 43.43,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 42.4485,
+      "baseline_std": 1.9869052238144245
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 113,
+    "fields": {
+      "run": 1,
+      "distance_m": 560,
+      "pressure_bar": 44.18,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.437,
+      "baseline_std": 1.9801783545401836
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 114,
+    "fields": {
+      "run": 1,
+      "distance_m": 565,
+      "pressure_bar": 43.54,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.484,
+      "baseline_std": 2.0111541593402467
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 115,
+    "fields": {
+      "run": 1,
+      "distance_m": 570,
+      "pressure_bar": 43.12,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 42.4775,
+      "baseline_std": 2.0073257281635595
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 116,
+    "fields": {
+      "run": 1,
+      "distance_m": 575,
+      "pressure_bar": 43.59,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.451499999999996,
+      "baseline_std": 1.9948045016993508
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 117,
+    "fields": {
+      "run": 1,
+      "distance_m": 580,
+      "pressure_bar": 43.24,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.4685,
+      "baseline_std": 2.003397837359529
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 118,
+    "fields": {
+      "run": 1,
+      "distance_m": 585,
+      "pressure_bar": 43.12,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.652499999999996,
+      "baseline_std": 1.887872305561279
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 119,
+    "fields": {
+      "run": 1,
+      "distance_m": 590,
+      "pressure_bar": 43.61,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 42.845,
+      "baseline_std": 1.7130044397275546
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 120,
+    "fields": {
+      "run": 1,
+      "distance_m": 595,
+      "pressure_bar": 43.26,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 43.076,
+      "baseline_std": 1.4583747262296
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 121,
+    "fields": {
+      "run": 1,
+      "distance_m": 600,
+      "pressure_bar": 43.9,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 43.2895,
+      "baseline_std": 1.096335883030858
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 122,
+    "fields": {
+      "run": 1,
+      "distance_m": 605,
+      "pressure_bar": 43.7,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.542500000000004,
+      "baseline_std": 0.3349450072694577
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 123,
+    "fields": {
+      "run": 1,
+      "distance_m": 610,
+      "pressure_bar": 43.08,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.5495,
+      "baseline_std": 0.33678784513633986
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 124,
+    "fields": {
+      "run": 1,
+      "distance_m": 615,
+      "pressure_bar": 43.87,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 43.494,
+      "baseline_std": 0.31653385950088625
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 125,
+    "fields": {
+      "run": 1,
+      "distance_m": 620,
+      "pressure_bar": 43.49,
+      "temperature_c": 21.3,
+      "anomaly": false,
+      "baseline_mean": 43.483,
+      "baseline_std": 0.2980127160833386
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 126,
+    "fields": {
+      "run": 1,
+      "distance_m": 625,
+      "pressure_bar": 43.3,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 43.4785,
+      "baseline_std": 0.29714917394963014
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 127,
+    "fields": {
+      "run": 1,
+      "distance_m": 630,
+      "pressure_bar": 43.4,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.485,
+      "baseline_std": 0.29141216966966094
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 128,
+    "fields": {
+      "run": 1,
+      "distance_m": 635,
+      "pressure_bar": 44.09,
+      "temperature_c": 20.6,
+      "anomaly": true,
+      "baseline_mean": 43.491,
+      "baseline_std": 0.28818670848491396
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 129,
+    "fields": {
+      "run": 1,
+      "distance_m": 640,
+      "pressure_bar": 42.78,
+      "temperature_c": 19.8,
+      "anomaly": true,
+      "baseline_mean": 43.510000000000005,
+      "baseline_std": 0.3146928326914501
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 130,
+    "fields": {
+      "run": 1,
+      "distance_m": 645,
+      "pressure_bar": 43.41,
+      "temperature_c": 20.3,
+      "anomaly": false,
+      "baseline_mean": 43.4805,
+      "baseline_std": 0.3537390504163685
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 131,
+    "fields": {
+      "run": 1,
+      "distance_m": 650,
+      "pressure_bar": 42.77,
+      "temperature_c": 19.1,
+      "anomaly": true,
+      "baseline_mean": 43.486000000000004,
+      "baseline_std": 0.35163378078545593
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 132,
+    "fields": {
+      "run": 1,
+      "distance_m": 655,
+      "pressure_bar": 42.56,
+      "temperature_c": 20.0,
+      "anomaly": true,
+      "baseline_mean": 43.444,
+      "baseline_std": 0.3846584267413858
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 133,
+    "fields": {
+      "run": 1,
+      "distance_m": 660,
+      "pressure_bar": 43.18,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 43.4005,
+      "baseline_std": 0.4325381029762762
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 134,
+    "fields": {
+      "run": 1,
+      "distance_m": 665,
+      "pressure_bar": 42.93,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 43.3505,
+      "baseline_std": 0.39374684626974266
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 135,
+    "fields": {
+      "run": 1,
+      "distance_m": 670,
+      "pressure_bar": 42.47,
+      "temperature_c": 20.1,
+      "anomaly": true,
+      "baseline_mean": 43.32,
+      "baseline_std": 0.40183788299577516
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 136,
+    "fields": {
+      "run": 1,
+      "distance_m": 675,
+      "pressure_bar": 43.3,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 43.2875,
+      "baseline_std": 0.4430382542589772
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 137,
+    "fields": {
+      "run": 1,
+      "distance_m": 680,
+      "pressure_bar": 43.43,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.273,
+      "baseline_std": 0.4373256043390625
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 138,
+    "fields": {
+      "run": 1,
+      "distance_m": 685,
+      "pressure_bar": 43.61,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.2825,
+      "baseline_std": 0.438632744115765
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 139,
+    "fields": {
+      "run": 1,
+      "distance_m": 690,
+      "pressure_bar": 42.89,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.307,
+      "baseline_std": 0.4427438370696511
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 140,
+    "fields": {
+      "run": 1,
+      "distance_m": 695,
+      "pressure_bar": 42.9,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 43.271,
+      "baseline_std": 0.4460693833215209
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 141,
+    "fields": {
+      "run": 1,
+      "distance_m": 700,
+      "pressure_bar": 43.14,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 43.253,
+      "baseline_std": 0.4537342138764776
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 142,
+    "fields": {
+      "run": 1,
+      "distance_m": 705,
+      "pressure_bar": 42.94,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 43.214999999999996,
+      "baseline_std": 0.4277788410406775
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 143,
+    "fields": {
+      "run": 1,
+      "distance_m": 710,
+      "pressure_bar": 43.18,
+      "temperature_c": 20.7,
+      "anomaly": false,
+      "baseline_mean": 43.177,
+      "baseline_std": 0.4160225196333789
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 144,
+    "fields": {
+      "run": 1,
+      "distance_m": 715,
+      "pressure_bar": 43.04,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 43.182,
+      "baseline_std": 0.4153958163132197
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 145,
+    "fields": {
+      "run": 1,
+      "distance_m": 720,
+      "pressure_bar": 42.81,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 43.140499999999996,
+      "baseline_std": 0.383261282320972
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 146,
+    "fields": {
+      "run": 1,
+      "distance_m": 725,
+      "pressure_bar": 42.55,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 43.1065,
+      "baseline_std": 0.380778634407253
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 147,
+    "fields": {
+      "run": 1,
+      "distance_m": 730,
+      "pressure_bar": 43.0,
+      "temperature_c": 20.7,
+      "anomaly": false,
+      "baseline_mean": 43.069,
+      "baseline_std": 0.3972921502264788
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 148,
+    "fields": {
+      "run": 1,
+      "distance_m": 735,
+      "pressure_bar": 43.29,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 43.049,
+      "baseline_std": 0.38974890702388876
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 149,
+    "fields": {
+      "run": 1,
+      "distance_m": 740,
+      "pressure_bar": 42.69,
+      "temperature_c": 20.3,
+      "anomaly": false,
+      "baseline_mean": 43.009,
+      "baseline_std": 0.31022742082475335
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 150,
+    "fields": {
+      "run": 1,
+      "distance_m": 745,
+      "pressure_bar": 42.52,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 43.0045,
+      "baseline_std": 0.314349369835203
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 151,
+    "fields": {
+      "run": 1,
+      "distance_m": 750,
+      "pressure_bar": 43.04,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 42.96,
+      "baseline_std": 0.31690941757443586
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 152,
+    "fields": {
+      "run": 1,
+      "distance_m": 755,
+      "pressure_bar": 43.58,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.9735,
+      "baseline_std": 0.3141282842205843
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 153,
+    "fields": {
+      "run": 1,
+      "distance_m": 760,
+      "pressure_bar": 42.19,
+      "temperature_c": 20.2,
+      "anomaly": true,
+      "baseline_mean": 43.0245,
+      "baseline_std": 0.3260364041669352
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 154,
+    "fields": {
+      "run": 1,
+      "distance_m": 765,
+      "pressure_bar": 42.69,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.975,
+      "baseline_std": 0.3729611239794303
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 155,
+    "fields": {
+      "run": 1,
+      "distance_m": 770,
+      "pressure_bar": 42.98,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.963,
+      "baseline_std": 0.3783078668297332
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 156,
+    "fields": {
+      "run": 1,
+      "distance_m": 775,
+      "pressure_bar": 42.08,
+      "temperature_c": 19.5,
+      "anomaly": true,
+      "baseline_mean": 42.9885,
+      "baseline_std": 0.3600771116244262
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 157,
+    "fields": {
+      "run": 1,
+      "distance_m": 780,
+      "pressure_bar": 43.04,
+      "temperature_c": 20.5,
+      "anomaly": false,
+      "baseline_mean": 42.927499999999995,
+      "baseline_std": 0.4050584753107294
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 158,
+    "fields": {
+      "run": 1,
+      "distance_m": 785,
+      "pressure_bar": 43.42,
+      "temperature_c": 20.7,
+      "anomaly": false,
+      "baseline_mean": 42.908,
+      "baseline_std": 0.3886494835357841
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 159,
+    "fields": {
+      "run": 1,
+      "distance_m": 790,
+      "pressure_bar": 42.01,
+      "temperature_c": 20.3,
+      "anomaly": true,
+      "baseline_mean": 42.8985,
+      "baseline_std": 0.37257673176492356
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 160,
+    "fields": {
+      "run": 1,
+      "distance_m": 795,
+      "pressure_bar": 42.04,
+      "temperature_c": 20.6,
+      "anomaly": false,
+      "baseline_mean": 42.8545,
+      "baseline_std": 0.42228046304995515
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 161,
+    "fields": {
+      "run": 1,
+      "distance_m": 800,
+      "pressure_bar": 42.77,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.8115,
+      "baseline_std": 0.4595452557749492
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 162,
+    "fields": {
+      "run": 1,
+      "distance_m": 805,
+      "pressure_bar": 43.37,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.793,
+      "baseline_std": 0.4530260826695828
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 163,
+    "fields": {
+      "run": 1,
+      "distance_m": 810,
+      "pressure_bar": 41.98,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.814499999999995,
+      "baseline_std": 0.47024601623987616
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 164,
+    "fields": {
+      "run": 1,
+      "distance_m": 815,
+      "pressure_bar": 42.36,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.7545,
+      "baseline_std": 0.4969536142708316
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 165,
+    "fields": {
+      "run": 1,
+      "distance_m": 820,
+      "pressure_bar": 42.43,
+      "temperature_c": 20.5,
+      "anomaly": false,
+      "baseline_mean": 42.7205,
+      "baseline_std": 0.49964698064049007
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 166,
+    "fields": {
+      "run": 1,
+      "distance_m": 825,
+      "pressure_bar": 42.07,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.701499999999996,
+      "baseline_std": 0.5032763706584665
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 167,
+    "fields": {
+      "run": 1,
+      "distance_m": 830,
+      "pressure_bar": 43.18,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 42.677499999999995,
+      "baseline_std": 0.5219787755314035
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 168,
+    "fields": {
+      "run": 1,
+      "distance_m": 835,
+      "pressure_bar": 42.6,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.6865,
+      "baseline_std": 0.5293320020753071
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 169,
+    "fields": {
+      "run": 1,
+      "distance_m": 840,
+      "pressure_bar": 42.26,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.652,
+      "baseline_std": 0.5100629476116806
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 170,
+    "fields": {
+      "run": 1,
+      "distance_m": 845,
+      "pressure_bar": 42.51,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.6305,
+      "baseline_std": 0.5173869060251873
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 171,
+    "fields": {
+      "run": 1,
+      "distance_m": 850,
+      "pressure_bar": 43.07,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.63,
+      "baseline_std": 0.5175041316895835
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 172,
+    "fields": {
+      "run": 1,
+      "distance_m": 855,
+      "pressure_bar": 42.37,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 42.6315,
+      "baseline_std": 0.5187969382695845
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 173,
+    "fields": {
+      "run": 1,
+      "distance_m": 860,
+      "pressure_bar": 42.13,
+      "temperature_c": 20.4,
+      "anomaly": false,
+      "baseline_mean": 42.571,
+      "baseline_std": 0.47068706779502045
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 174,
+    "fields": {
+      "run": 1,
+      "distance_m": 865,
+      "pressure_bar": 42.33,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.568,
+      "baseline_std": 0.47342647959207734
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 175,
+    "fields": {
+      "run": 1,
+      "distance_m": 870,
+      "pressure_bar": 42.29,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.55,
+      "baseline_std": 0.47538350169543203
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 176,
+    "fields": {
+      "run": 1,
+      "distance_m": 875,
+      "pressure_bar": 42.29,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.515499999999996,
+      "baseline_std": 0.4675071066164048
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 177,
+    "fields": {
+      "run": 1,
+      "distance_m": 880,
+      "pressure_bar": 42.25,
+      "temperature_c": 20.2,
+      "anomaly": false,
+      "baseline_mean": 42.525999999999996,
+      "baseline_std": 0.45950087337412027
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 178,
+    "fields": {
+      "run": 1,
+      "distance_m": 885,
+      "pressure_bar": 42.52,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 42.4865,
+      "baseline_std": 0.446769397717483
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 179,
+    "fields": {
+      "run": 1,
+      "distance_m": 890,
+      "pressure_bar": 41.96,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.441500000000005,
+      "baseline_std": 0.38944325983585737
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 180,
+    "fields": {
+      "run": 1,
+      "distance_m": 895,
+      "pressure_bar": 41.98,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.439,
+      "baseline_std": 0.392507458863087
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 181,
+    "fields": {
+      "run": 1,
+      "distance_m": 900,
+      "pressure_bar": 42.51,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 42.436,
+      "baseline_std": 0.39593194524205555
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 182,
+    "fields": {
+      "run": 1,
+      "distance_m": 905,
+      "pressure_bar": 42.74,
+      "temperature_c": 20.7,
+      "anomaly": false,
+      "baseline_mean": 42.423,
+      "baseline_std": 0.38858853898639234
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 183,
+    "fields": {
+      "run": 1,
+      "distance_m": 910,
+      "pressure_bar": 42.17,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.3915,
+      "baseline_std": 0.3287019926924696
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 184,
+    "fields": {
+      "run": 1,
+      "distance_m": 915,
+      "pressure_bar": 42.0,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 42.400999999999996,
+      "baseline_std": 0.3187789202566571
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 185,
+    "fields": {
+      "run": 1,
+      "distance_m": 920,
+      "pressure_bar": 41.59,
+      "temperature_c": 19.7,
+      "anomaly": true,
+      "baseline_mean": 42.382999999999996,
+      "baseline_std": 0.33113997676288864
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 186,
+    "fields": {
+      "run": 1,
+      "distance_m": 925,
+      "pressure_bar": 42.19,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 42.341,
+      "baseline_std": 0.37520380426754996
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 187,
+    "fields": {
+      "run": 1,
+      "distance_m": 930,
+      "pressure_bar": 41.79,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.347,
+      "baseline_std": 0.3715840912123461
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 188,
+    "fields": {
+      "run": 1,
+      "distance_m": 935,
+      "pressure_bar": 42.66,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 42.277499999999996,
+      "baseline_std": 0.3358551536161478
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 189,
+    "fields": {
+      "run": 1,
+      "distance_m": 940,
+      "pressure_bar": 41.72,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 42.2805,
+      "baseline_std": 0.33913939068735327
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 190,
+    "fields": {
+      "run": 1,
+      "distance_m": 945,
+      "pressure_bar": 42.32,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.253499999999995,
+      "baseline_std": 0.36160861366079766
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 191,
+    "fields": {
+      "run": 1,
+      "distance_m": 950,
+      "pressure_bar": 42.13,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.244,
+      "baseline_std": 0.35698149738282525
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 192,
+    "fields": {
+      "run": 1,
+      "distance_m": 955,
+      "pressure_bar": 42.2,
+      "temperature_c": 20.3,
+      "anomaly": false,
+      "baseline_mean": 42.197,
+      "baseline_std": 0.299808710943986
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 193,
+    "fields": {
+      "run": 1,
+      "distance_m": 960,
+      "pressure_bar": 41.72,
+      "temperature_c": 20.1,
+      "anomaly": false,
+      "baseline_mean": 42.1885,
+      "baseline_std": 0.2970428818945345
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 194,
+    "fields": {
+      "run": 1,
+      "distance_m": 965,
+      "pressure_bar": 41.61,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 42.168,
+      "baseline_std": 0.3149034939887389
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 195,
+    "fields": {
+      "run": 1,
+      "distance_m": 970,
+      "pressure_bar": 42.28,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.132,
+      "baseline_std": 0.3358665148380732
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 196,
+    "fields": {
+      "run": 1,
+      "distance_m": 975,
+      "pressure_bar": 41.84,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 42.1315,
+      "baseline_std": 0.33562628025826585
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 197,
+    "fields": {
+      "run": 1,
+      "distance_m": 980,
+      "pressure_bar": 42.01,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.109,
+      "baseline_std": 0.33950273233533457
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 198,
+    "fields": {
+      "run": 1,
+      "distance_m": 985,
+      "pressure_bar": 41.46,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.097,
+      "baseline_std": 0.3384966764977168
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 199,
+    "fields": {
+      "run": 1,
+      "distance_m": 990,
+      "pressure_bar": 41.85,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 42.044,
+      "baseline_std": 0.3515140185869657
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 200,
+    "fields": {
+      "run": 1,
+      "distance_m": 995,
+      "pressure_bar": 41.86,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 42.0385,
+      "baseline_std": 0.3537509531324333
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 201,
+    "fields": {
+      "run": 1,
+      "distance_m": 1000,
+      "pressure_bar": 41.51,
+      "temperature_c": 20.0,
+      "anomaly": false,
+      "baseline_mean": 42.0325,
+      "baseline_std": 0.35580708847706516
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 202,
+    "fields": {
+      "run": 1,
+      "distance_m": 1005,
+      "pressure_bar": 41.9,
+      "temperature_c": 19.3,
+      "anomaly": false,
+      "baseline_mean": 41.9825,
+      "baseline_std": 0.3554370919245619
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 203,
+    "fields": {
+      "run": 1,
+      "distance_m": 1010,
+      "pressure_bar": 41.43,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 41.9405,
+      "baseline_std": 0.307630588445571
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 204,
+    "fields": {
+      "run": 1,
+      "distance_m": 1015,
+      "pressure_bar": 41.11,
+      "temperature_c": 19.4,
+      "anomaly": true,
+      "baseline_mean": 41.9035,
+      "baseline_std": 0.32270688998238806
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 205,
+    "fields": {
+      "run": 1,
+      "distance_m": 1020,
+      "pressure_bar": 41.4,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 41.858999999999995,
+      "baseline_std": 0.3670207222028692
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 206,
+    "fields": {
+      "run": 1,
+      "distance_m": 1025,
+      "pressure_bar": 41.67,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 41.8495,
+      "baseline_std": 0.3766818425758213
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 207,
+    "fields": {
+      "run": 1,
+      "distance_m": 1030,
+      "pressure_bar": 41.97,
+      "temperature_c": 19.6,
+      "anomaly": false,
+      "baseline_mean": 41.8235,
+      "baseline_std": 0.3698260615336266
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 208,
+    "fields": {
+      "run": 1,
+      "distance_m": 1035,
+      "pressure_bar": 41.43,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 41.832499999999996,
+      "baseline_std": 0.37115573408930175
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 209,
+    "fields": {
+      "run": 1,
+      "distance_m": 1040,
+      "pressure_bar": 41.77,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 41.771,
+      "baseline_std": 0.3259786883573193
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 210,
+    "fields": {
+      "run": 1,
+      "distance_m": 1045,
+      "pressure_bar": 42.01,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 41.7735,
+      "baseline_std": 0.32575862875835954
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 211,
+    "fields": {
+      "run": 1,
+      "distance_m": 1050,
+      "pressure_bar": 41.48,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 41.757999999999996,
+      "baseline_std": 0.305107401279926
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 212,
+    "fields": {
+      "run": 1,
+      "distance_m": 1055,
+      "pressure_bar": 41.42,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 41.7255,
+      "baseline_std": 0.2979310234548299
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 213,
+    "fields": {
+      "run": 1,
+      "distance_m": 1060,
+      "pressure_bar": 40.83,
+      "temperature_c": 19.7,
+      "anomaly": true,
+      "baseline_mean": 41.6865,
+      "baseline_std": 0.28323832256321024
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 214,
+    "fields": {
+      "run": 1,
+      "distance_m": 1065,
+      "pressure_bar": 41.63,
+      "temperature_c": 19.9,
+      "anomaly": false,
+      "baseline_mean": 41.642,
+      "baseline_std": 0.34159995069640997
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 215,
+    "fields": {
+      "run": 1,
+      "distance_m": 1070,
+      "pressure_bar": 42.17,
+      "temperature_c": 19.3,
+      "anomaly": false,
+      "baseline_mean": 41.643,
+      "baseline_std": 0.3415306104798471
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 216,
+    "fields": {
+      "run": 1,
+      "distance_m": 1075,
+      "pressure_bar": 41.35,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 41.6375,
+      "baseline_std": 0.33147001134499765
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 217,
+    "fields": {
+      "run": 1,
+      "distance_m": 1080,
+      "pressure_bar": 42.02,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 41.613,
+      "baseline_std": 0.3338152656469555
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 218,
+    "fields": {
+      "run": 1,
+      "distance_m": 1085,
+      "pressure_bar": 41.48,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 41.6135,
+      "baseline_std": 0.3344480921096573
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 219,
+    "fields": {
+      "run": 1,
+      "distance_m": 1090,
+      "pressure_bar": 40.39,
+      "temperature_c": 18.5,
+      "anomaly": true,
+      "baseline_mean": 41.6145,
+      "baseline_std": 0.33399456346032497
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 220,
+    "fields": {
+      "run": 1,
+      "distance_m": 1095,
+      "pressure_bar": 40.79,
+      "temperature_c": 19.7,
+      "anomaly": false,
+      "baseline_mean": 41.5415,
+      "baseline_std": 0.4265439447959677
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 221,
+    "fields": {
+      "run": 1,
+      "distance_m": 1100,
+      "pressure_bar": 40.94,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 41.488,
+      "baseline_std": 0.45090085267979785
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 222,
+    "fields": {
+      "run": 1,
+      "distance_m": 1105,
+      "pressure_bar": 40.82,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 41.459500000000006,
+      "baseline_std": 0.4671579807167688
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 223,
+    "fields": {
+      "run": 1,
+      "distance_m": 1110,
+      "pressure_bar": 40.82,
+      "temperature_c": 19.8,
+      "anomaly": false,
+      "baseline_mean": 41.4055,
+      "baseline_std": 0.4758977665534131
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 224,
+    "fields": {
+      "run": 1,
+      "distance_m": 1115,
+      "pressure_bar": 40.84,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 41.375,
+      "baseline_std": 0.49346785742922505
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 225,
+    "fields": {
+      "run": 1,
+      "distance_m": 1120,
+      "pressure_bar": 41.21,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 41.3615,
+      "baseline_std": 0.5046653398670828
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 226,
+    "fields": {
+      "run": 1,
+      "distance_m": 1125,
+      "pressure_bar": 41.64,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 41.352,
+      "baseline_std": 0.5056897322105306
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 227,
+    "fields": {
+      "run": 1,
+      "distance_m": 1130,
+      "pressure_bar": 40.7,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 41.3505,
+      "baseline_std": 0.5047404231254342
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 228,
+    "fields": {
+      "run": 1,
+      "distance_m": 1135,
+      "pressure_bar": 40.9,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 41.287,
+      "baseline_std": 0.5025838500347874
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 229,
+    "fields": {
+      "run": 1,
+      "distance_m": 1140,
+      "pressure_bar": 41.22,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 41.2605,
+      "baseline_std": 0.5085839474255431
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 230,
+    "fields": {
+      "run": 1,
+      "distance_m": 1145,
+      "pressure_bar": 41.37,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 41.233,
+      "baseline_std": 0.49425222625486964
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 231,
+    "fields": {
+      "run": 1,
+      "distance_m": 1150,
+      "pressure_bar": 41.0,
+      "temperature_c": 19.2,
+      "anomaly": false,
+      "baseline_mean": 41.201,
+      "baseline_std": 0.46089044251318584
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 232,
+    "fields": {
+      "run": 1,
+      "distance_m": 1155,
+      "pressure_bar": 41.56,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 41.177,
+      "baseline_std": 0.45808640876447887
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 233,
+    "fields": {
+      "run": 1,
+      "distance_m": 1160,
+      "pressure_bar": 40.88,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 41.184000000000005,
+      "baseline_std": 0.46303802276521117
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 234,
+    "fields": {
+      "run": 1,
+      "distance_m": 1165,
+      "pressure_bar": 41.23,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 41.1865,
+      "baseline_std": 0.46115729705988523
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 235,
+    "fields": {
+      "run": 1,
+      "distance_m": 1170,
+      "pressure_bar": 41.09,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 41.1665,
+      "baseline_std": 0.4494356109845467
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 236,
+    "fields": {
+      "run": 1,
+      "distance_m": 1175,
+      "pressure_bar": 41.32,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 41.1125,
+      "baseline_std": 0.3824006578941709
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 237,
+    "fields": {
+      "run": 1,
+      "distance_m": 1180,
+      "pressure_bar": 40.66,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 41.111000000000004,
+      "baseline_std": 0.381477736123479
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 238,
+    "fields": {
+      "run": 1,
+      "distance_m": 1185,
+      "pressure_bar": 40.45,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 41.043,
+      "baseline_std": 0.32844289738416493
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 239,
+    "fields": {
+      "run": 1,
+      "distance_m": 1190,
+      "pressure_bar": 40.92,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 40.9915,
+      "baseline_std": 0.3369565800546193
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 240,
+    "fields": {
+      "run": 1,
+      "distance_m": 1195,
+      "pressure_bar": 41.35,
+      "temperature_c": 19.5,
+      "anomaly": false,
+      "baseline_mean": 41.018,
+      "baseline_std": 0.30663882406024917
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 241,
+    "fields": {
+      "run": 1,
+      "distance_m": 1200,
+      "pressure_bar": 46.5,
+      "temperature_c": 18.3,
+      "anomaly": true,
+      "baseline_mean": 41.046,
+      "baseline_std": 0.3102698316321657
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 242,
+    "fields": {
+      "run": 1,
+      "distance_m": 1205,
+      "pressure_bar": 46.44,
+      "temperature_c": 18.7,
+      "anomaly": true,
+      "baseline_mean": 41.324,
+      "baseline_std": 1.2569444990468792
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 243,
+    "fields": {
+      "run": 1,
+      "distance_m": 1210,
+      "pressure_bar": 47.11,
+      "temperature_c": 18.8,
+      "anomaly": true,
+      "baseline_mean": 41.605000000000004,
+      "baseline_std": 1.6914413038029208
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 244,
+    "fields": {
+      "run": 1,
+      "distance_m": 1215,
+      "pressure_bar": 46.35,
+      "temperature_c": 19.4,
+      "anomaly": true,
+      "baseline_mean": 41.9195,
+      "baseline_std": 2.0783228942182146
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 245,
+    "fields": {
+      "run": 1,
+      "distance_m": 1220,
+      "pressure_bar": 46.96,
+      "temperature_c": 18.6,
+      "anomaly": true,
+      "baseline_mean": 42.195,
+      "baseline_std": 2.2828318055940033
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 246,
+    "fields": {
+      "run": 1,
+      "distance_m": 1225,
+      "pressure_bar": 46.32,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 42.4825,
+      "baseline_std": 2.50364970435268
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 247,
+    "fields": {
+      "run": 1,
+      "distance_m": 1230,
+      "pressure_bar": 47.15,
+      "temperature_c": 19.4,
+      "anomaly": false,
+      "baseline_mean": 42.7165,
+      "baseline_std": 2.6359703596288986
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 248,
+    "fields": {
+      "run": 1,
+      "distance_m": 1235,
+      "pressure_bar": 47.39,
+      "temperature_c": 19.1,
+      "anomaly": false,
+      "baseline_mean": 43.039,
+      "baseline_std": 2.767556208719355
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 249,
+    "fields": {
+      "run": 1,
+      "distance_m": 1240,
+      "pressure_bar": 47.2,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 43.3635,
+      "baseline_std": 2.88168312476909
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 250,
+    "fields": {
+      "run": 1,
+      "distance_m": 1245,
+      "pressure_bar": 40.76,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 43.6625,
+      "baseline_std": 2.956829516470925
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 251,
+    "fields": {
+      "run": 1,
+      "distance_m": 1250,
+      "pressure_bar": 40.73,
+      "temperature_c": 18.0,
+      "anomaly": false,
+      "baseline_mean": 43.632,
+      "baseline_std": 2.984735904741428
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 252,
+    "fields": {
+      "run": 1,
+      "distance_m": 1255,
+      "pressure_bar": 40.7,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 43.6185,
+      "baseline_std": 2.997848834010639
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 253,
+    "fields": {
+      "run": 1,
+      "distance_m": 1260,
+      "pressure_bar": 41.13,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 43.5755,
+      "baseline_std": 3.0348683748445464
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 254,
+    "fields": {
+      "run": 1,
+      "distance_m": 1265,
+      "pressure_bar": 41.01,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 43.588,
+      "baseline_std": 3.0236760478108864
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 255,
+    "fields": {
+      "run": 1,
+      "distance_m": 1270,
+      "pressure_bar": 40.31,
+      "temperature_c": 18.1,
+      "anomaly": false,
+      "baseline_mean": 43.577,
+      "baseline_std": 3.033091353371134
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 256,
+    "fields": {
+      "run": 1,
+      "distance_m": 1275,
+      "pressure_bar": 40.32,
+      "temperature_c": 18.1,
+      "anomaly": false,
+      "baseline_mean": 43.538,
+      "baseline_std": 3.0715238803187614
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 257,
+    "fields": {
+      "run": 1,
+      "distance_m": 1280,
+      "pressure_bar": 40.87,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 43.488,
+      "baseline_std": 3.11732780303563
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 258,
+    "fields": {
+      "run": 1,
+      "distance_m": 1285,
+      "pressure_bar": 40.84,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 43.4985,
+      "baseline_std": 3.107639610277939
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 259,
+    "fields": {
+      "run": 1,
+      "distance_m": 1290,
+      "pressure_bar": 40.99,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 43.518,
+      "baseline_std": 3.088669616517765
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 260,
+    "fields": {
+      "run": 1,
+      "distance_m": 1295,
+      "pressure_bar": 40.39,
+      "temperature_c": 18.4,
+      "anomaly": false,
+      "baseline_mean": 43.5215,
+      "baseline_std": 3.085608828433258
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 261,
+    "fields": {
+      "run": 1,
+      "distance_m": 1300,
+      "pressure_bar": 40.42,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": 43.4735,
+      "baseline_std": 3.1283378384661313
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 262,
+    "fields": {
+      "run": 1,
+      "distance_m": 1305,
+      "pressure_bar": 40.83,
+      "temperature_c": 19.0,
+      "anomaly": false,
+      "baseline_mean": 43.1695,
+      "baseline_std": 3.1141383449646143
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 263,
+    "fields": {
+      "run": 1,
+      "distance_m": 1310,
+      "pressure_bar": 40.59,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 42.888999999999996,
+      "baseline_std": 3.0561652958878835
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 264,
+    "fields": {
+      "run": 1,
+      "distance_m": 1315,
+      "pressure_bar": 40.96,
+      "temperature_c": 17.5,
+      "anomaly": false,
+      "baseline_mean": 42.563,
+      "baseline_std": 2.9272388642577587
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 265,
+    "fields": {
+      "run": 1,
+      "distance_m": 1320,
+      "pressure_bar": 40.63,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 42.2935,
+      "baseline_std": 2.8058346633211904
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 266,
+    "fields": {
+      "run": 1,
+      "distance_m": 1325,
+      "pressure_bar": 40.37,
+      "temperature_c": 18.9,
+      "anomaly": false,
+      "baseline_mean": 41.977,
+      "baseline_std": 2.601305542668102
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 267,
+    "fields": {
+      "run": 1,
+      "distance_m": 1330,
+      "pressure_bar": 40.9,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 41.679500000000004,
+      "baseline_std": 2.4118097048962173
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 268,
+    "fields": {
+      "run": 1,
+      "distance_m": 1335,
+      "pressure_bar": 40.52,
+      "temperature_c": 18.2,
+      "anomaly": false,
+      "baseline_mean": 41.367000000000004,
+      "baseline_std": 2.042287417269382
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 269,
+    "fields": {
+      "run": 1,
+      "distance_m": 1340,
+      "pressure_bar": 40.37,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 41.0235,
+      "baseline_std": 1.4748569065291872
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 270,
+    "fields": {
+      "run": 1,
+      "distance_m": 1345,
+      "pressure_bar": 41.02,
+      "temperature_c": 18.7,
+      "anomaly": false,
+      "baseline_mean": 40.682,
+      "baseline_std": 0.25897774746918023
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 271,
+    "fields": {
+      "run": 1,
+      "distance_m": 1350,
+      "pressure_bar": 40.81,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 40.695,
+      "baseline_std": 0.2694145699963457
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 272,
+    "fields": {
+      "run": 1,
+      "distance_m": 1355,
+      "pressure_bar": 41.26,
+      "temperature_c": 19.1,
+      "anomaly": true,
+      "baseline_mean": 40.699,
+      "baseline_std": 0.2705530398432462
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 273,
+    "fields": {
+      "run": 1,
+      "distance_m": 1360,
+      "pressure_bar": 40.59,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": 40.727,
+      "baseline_std": 0.29822457098106797
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 274,
+    "fields": {
+      "run": 1,
+      "distance_m": 1365,
+      "pressure_bar": 40.22,
+      "temperature_c": 18.4,
+      "anomaly": false,
+      "baseline_mean": 40.7,
+      "baseline_std": 0.28391992940931304
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 275,
+    "fields": {
+      "run": 1,
+      "distance_m": 1370,
+      "pressure_bar": 40.2,
+      "temperature_c": 18.2,
+      "anomaly": false,
+      "baseline_mean": 40.6605,
+      "baseline_std": 0.2933199259296382
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 276,
+    "fields": {
+      "run": 1,
+      "distance_m": 1375,
+      "pressure_bar": 40.89,
+      "temperature_c": 17.6,
+      "anomaly": false,
+      "baseline_mean": 40.655,
+      "baseline_std": 0.3011644069275119
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 277,
+    "fields": {
+      "run": 1,
+      "distance_m": 1380,
+      "pressure_bar": 41.21,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 40.6835,
+      "baseline_std": 0.29469475733375367
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 278,
+    "fields": {
+      "run": 1,
+      "distance_m": 1385,
+      "pressure_bar": 40.07,
+      "temperature_c": 17.6,
+      "anomaly": true,
+      "baseline_mean": 40.7005,
+      "baseline_std": 0.3151186075783296
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 279,
+    "fields": {
+      "run": 1,
+      "distance_m": 1390,
+      "pressure_bar": 40.41,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.662,
+      "baseline_std": 0.3429838111877033
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 280,
+    "fields": {
+      "run": 1,
+      "distance_m": 1395,
+      "pressure_bar": 40.41,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 40.632999999999996,
+      "baseline_std": 0.33827892570916596
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 281,
+    "fields": {
+      "run": 1,
+      "distance_m": 1400,
+      "pressure_bar": 40.42,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 40.634,
+      "baseline_std": 0.33755155551645605
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 282,
+    "fields": {
+      "run": 1,
+      "distance_m": 1405,
+      "pressure_bar": 40.11,
+      "temperature_c": 17.9,
+      "anomaly": false,
+      "baseline_mean": 40.634,
+      "baseline_std": 0.33755155551645605
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 283,
+    "fields": {
+      "run": 1,
+      "distance_m": 1410,
+      "pressure_bar": 39.98,
+      "temperature_c": 18.3,
+      "anomaly": false,
+      "baseline_mean": 40.598,
+      "baseline_std": 0.35356232235558405
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 284,
+    "fields": {
+      "run": 1,
+      "distance_m": 1415,
+      "pressure_bar": 40.42,
+      "temperature_c": 18.8,
+      "anomaly": false,
+      "baseline_mean": 40.5675,
+      "baseline_std": 0.37963798545456495
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 285,
+    "fields": {
+      "run": 1,
+      "distance_m": 1420,
+      "pressure_bar": 40.57,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 40.540499999999994,
+      "baseline_std": 0.36931622450714363
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 286,
+    "fields": {
+      "run": 1,
+      "distance_m": 1425,
+      "pressure_bar": 40.69,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.5375,
+      "baseline_std": 0.36879426585335645
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 287,
+    "fields": {
+      "run": 1,
+      "distance_m": 1430,
+      "pressure_bar": 40.03,
+      "temperature_c": 18.0,
+      "anomaly": false,
+      "baseline_mean": 40.5535,
+      "baseline_std": 0.36808573086056756
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 288,
+    "fields": {
+      "run": 1,
+      "distance_m": 1435,
+      "pressure_bar": 40.44,
+      "temperature_c": 18.0,
+      "anomaly": false,
+      "baseline_mean": 40.510000000000005,
+      "baseline_std": 0.376297754444536
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 289,
+    "fields": {
+      "run": 1,
+      "distance_m": 1440,
+      "pressure_bar": 40.64,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.506,
+      "baseline_std": 0.37661092585543043
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 290,
+    "fields": {
+      "run": 1,
+      "distance_m": 1445,
+      "pressure_bar": 40.66,
+      "temperature_c": 18.6,
+      "anomaly": false,
+      "baseline_mean": 40.5195,
+      "baseline_std": 0.3763183842383863
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 291,
+    "fields": {
+      "run": 1,
+      "distance_m": 1450,
+      "pressure_bar": 40.12,
+      "temperature_c": 18.5,
+      "anomaly": false,
+      "baseline_mean": 40.5015,
+      "baseline_std": 0.35934553082836
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 292,
+    "fields": {
+      "run": 1,
+      "distance_m": 1455,
+      "pressure_bar": 40.43,
+      "temperature_c": 17.5,
+      "anomaly": false,
+      "baseline_mean": 40.467,
+      "baseline_std": 0.3612857157722302
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 293,
+    "fields": {
+      "run": 1,
+      "distance_m": 1460,
+      "pressure_bar": 41.37,
+      "temperature_c": 17.9,
+      "anomaly": true,
+      "baseline_mean": 40.4255,
+      "baseline_std": 0.30933672676602103
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 294,
+    "fields": {
+      "run": 1,
+      "distance_m": 1465,
+      "pressure_bar": 41.0,
+      "temperature_c": 18.1,
+      "anomaly": false,
+      "baseline_mean": 40.4645,
+      "baseline_std": 0.3736516108834397
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 295,
+    "fields": {
+      "run": 1,
+      "distance_m": 1470,
+      "pressure_bar": 39.94,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 40.503499999999995,
+      "baseline_std": 0.3872477107404047
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 296,
+    "fields": {
+      "run": 1,
+      "distance_m": 1475,
+      "pressure_bar": 40.35,
+      "temperature_c": 17.2,
+      "anomaly": false,
+      "baseline_mean": 40.4905,
+      "baseline_std": 0.4020536099367323
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 297,
+    "fields": {
+      "run": 1,
+      "distance_m": 1480,
+      "pressure_bar": 39.92,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.463499999999996,
+      "baseline_std": 0.3918146043864705
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 298,
+    "fields": {
+      "run": 1,
+      "distance_m": 1485,
+      "pressure_bar": 40.75,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 40.399,
+      "baseline_std": 0.3679087415450507
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 299,
+    "fields": {
+      "run": 1,
+      "distance_m": 1490,
+      "pressure_bar": 40.44,
+      "temperature_c": 17.3,
+      "anomaly": false,
+      "baseline_mean": 40.433,
+      "baseline_std": 0.36732460905996006
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 300,
+    "fields": {
+      "run": 1,
+      "distance_m": 1495,
+      "pressure_bar": 40.21,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.4345,
+      "baseline_std": 0.3672869951987207
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 301,
+    "fields": {
+      "run": 1,
+      "distance_m": 1500,
+      "pressure_bar": 40.2,
+      "temperature_c": 17.5,
+      "anomaly": false,
+      "baseline_mean": 40.4245,
+      "baseline_std": 0.3706960025624626
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 302,
+    "fields": {
+      "run": 1,
+      "distance_m": 1505,
+      "pressure_bar": 40.56,
+      "temperature_c": 17.2,
+      "anomaly": false,
+      "baseline_mean": 40.4135,
+      "baseline_std": 0.3740851999773648
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 303,
+    "fields": {
+      "run": 1,
+      "distance_m": 1510,
+      "pressure_bar": 40.5,
+      "temperature_c": 17.3,
+      "anomaly": false,
+      "baseline_mean": 40.436,
+      "baseline_std": 0.36835909253421634
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 304,
+    "fields": {
+      "run": 1,
+      "distance_m": 1515,
+      "pressure_bar": 40.58,
+      "temperature_c": 17.8,
+      "anomaly": false,
+      "baseline_mean": 40.462,
+      "baseline_std": 0.3524888949351897
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 305,
+    "fields": {
+      "run": 1,
+      "distance_m": 1520,
+      "pressure_bar": 40.66,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.47,
+      "baseline_std": 0.3533002301606646
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 306,
+    "fields": {
+      "run": 1,
+      "distance_m": 1525,
+      "pressure_bar": 40.02,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.4745,
+      "baseline_std": 0.3552089822240298
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 307,
+    "fields": {
+      "run": 1,
+      "distance_m": 1530,
+      "pressure_bar": 40.71,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.440999999999995,
+      "baseline_std": 0.36526702561276925
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 308,
+    "fields": {
+      "run": 1,
+      "distance_m": 1535,
+      "pressure_bar": 40.06,
+      "temperature_c": 17.5,
+      "anomaly": false,
+      "baseline_mean": 40.475,
+      "baseline_std": 0.3565403941092488
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 309,
+    "fields": {
+      "run": 1,
+      "distance_m": 1540,
+      "pressure_bar": 41.05,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.456,
+      "baseline_std": 0.3684305261939873
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 310,
+    "fields": {
+      "run": 1,
+      "distance_m": 1545,
+      "pressure_bar": 40.61,
+      "temperature_c": 17.6,
+      "anomaly": false,
+      "baseline_mean": 40.4765,
+      "baseline_std": 0.38998346793570254
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 311,
+    "fields": {
+      "run": 1,
+      "distance_m": 1550,
+      "pressure_bar": 40.74,
+      "temperature_c": 17.7,
+      "anomaly": false,
+      "baseline_mean": 40.474000000000004,
+      "baseline_std": 0.3889039930233077
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 312,
+    "fields": {
+      "run": 1,
+      "distance_m": 1555,
+      "pressure_bar": 40.69,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.505,
+      "baseline_std": 0.383879092807535
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 313,
+    "fields": {
+      "run": 1,
+      "distance_m": 1560,
+      "pressure_bar": 40.4,
+      "temperature_c": 17.3,
+      "anomaly": false,
+      "baseline_mean": 40.518,
+      "baseline_std": 0.38560410567807585
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 314,
+    "fields": {
+      "run": 1,
+      "distance_m": 1565,
+      "pressure_bar": 41.13,
+      "temperature_c": 17.3,
+      "anomaly": true,
+      "baseline_mean": 40.4695,
+      "baseline_std": 0.3297602797567691
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 315,
+    "fields": {
+      "run": 1,
+      "distance_m": 1570,
+      "pressure_bar": 40.64,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 40.476,
+      "baseline_std": 0.34182790376075695
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 316,
+    "fields": {
+      "run": 1,
+      "distance_m": 1575,
+      "pressure_bar": 40.99,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 40.511,
+      "baseline_std": 0.3191419416926705
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 317,
+    "fields": {
+      "run": 1,
+      "distance_m": 1580,
+      "pressure_bar": 41.04,
+      "temperature_c": 16.9,
+      "anomaly": false,
+      "baseline_mean": 40.543,
+      "baseline_std": 0.3338940897319004
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 318,
+    "fields": {
+      "run": 1,
+      "distance_m": 1585,
+      "pressure_bar": 40.37,
+      "temperature_c": 17.3,
+      "anomaly": false,
+      "baseline_mean": 40.599000000000004,
+      "baseline_std": 0.3174221827554949
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 319,
+    "fields": {
+      "run": 1,
+      "distance_m": 1590,
+      "pressure_bar": 40.8,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.58,
+      "baseline_std": 0.31927549562292257
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 320,
+    "fields": {
+      "run": 1,
+      "distance_m": 1595,
+      "pressure_bar": 41.14,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 40.598,
+      "baseline_std": 0.32110991723608917
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 321,
+    "fields": {
+      "run": 1,
+      "distance_m": 1600,
+      "pressure_bar": 40.94,
+      "temperature_c": 16.8,
+      "anomaly": false,
+      "baseline_mean": 40.6445,
+      "baseline_std": 0.3292011862867922
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 322,
+    "fields": {
+      "run": 1,
+      "distance_m": 1605,
+      "pressure_bar": 41.24,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 40.6815,
+      "baseline_std": 0.3180081925459084
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 323,
+    "fields": {
+      "run": 1,
+      "distance_m": 1610,
+      "pressure_bar": 41.0,
+      "temperature_c": 17.2,
+      "anomaly": false,
+      "baseline_mean": 40.7155,
+      "baseline_std": 0.33992994634343787
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 324,
+    "fields": {
+      "run": 1,
+      "distance_m": 1615,
+      "pressure_bar": 40.55,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 40.7405,
+      "baseline_std": 0.34162883829954205
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 325,
+    "fields": {
+      "run": 1,
+      "distance_m": 1620,
+      "pressure_bar": 41.02,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 40.739,
+      "baseline_std": 0.3424355490645763
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 326,
+    "fields": {
+      "run": 1,
+      "distance_m": 1625,
+      "pressure_bar": 40.9,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 40.757,
+      "baseline_std": 0.34748873514494194
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 327,
+    "fields": {
+      "run": 1,
+      "distance_m": 1630,
+      "pressure_bar": 40.94,
+      "temperature_c": 16.8,
+      "anomaly": false,
+      "baseline_mean": 40.801,
+      "baseline_std": 0.3019916346000685
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 328,
+    "fields": {
+      "run": 1,
+      "distance_m": 1635,
+      "pressure_bar": 40.51,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 40.8125,
+      "baseline_std": 0.3027222976156273
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 329,
+    "fields": {
+      "run": 1,
+      "distance_m": 1640,
+      "pressure_bar": 40.26,
+      "temperature_c": 17.3,
+      "anomaly": true,
+      "baseline_mean": 40.835,
+      "baseline_std": 0.2571401420073876
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 330,
+    "fields": {
+      "run": 1,
+      "distance_m": 1645,
+      "pressure_bar": 41.22,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 40.7955,
+      "baseline_std": 0.2818636288405415
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 331,
+    "fields": {
+      "run": 1,
+      "distance_m": 1650,
+      "pressure_bar": 40.59,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 40.826,
+      "baseline_std": 0.2934979601829961
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 332,
+    "fields": {
+      "run": 1,
+      "distance_m": 1655,
+      "pressure_bar": 40.91,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 40.8185,
+      "baseline_std": 0.2976977449837697
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 333,
+    "fields": {
+      "run": 1,
+      "distance_m": 1660,
+      "pressure_bar": 41.04,
+      "temperature_c": 17.2,
+      "anomaly": false,
+      "baseline_mean": 40.8295,
+      "baseline_std": 0.2967627973563016
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 334,
+    "fields": {
+      "run": 1,
+      "distance_m": 1665,
+      "pressure_bar": 40.89,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 40.8615,
+      "baseline_std": 0.2821585034207405
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 335,
+    "fields": {
+      "run": 1,
+      "distance_m": 1670,
+      "pressure_bar": 41.08,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 40.8495,
+      "baseline_std": 0.275154980252757
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 336,
+    "fields": {
+      "run": 1,
+      "distance_m": 1675,
+      "pressure_bar": 41.42,
+      "temperature_c": 16.9,
+      "anomaly": false,
+      "baseline_mean": 40.8715,
+      "baseline_std": 0.27511289548684964
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 337,
+    "fields": {
+      "run": 1,
+      "distance_m": 1680,
+      "pressure_bar": 40.81,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 40.893,
+      "baseline_std": 0.3004925780675534
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 338,
+    "fields": {
+      "run": 1,
+      "distance_m": 1685,
+      "pressure_bar": 41.14,
+      "temperature_c": 17.5,
+      "anomaly": false,
+      "baseline_mean": 40.8815,
+      "baseline_std": 0.2989679616702492
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 339,
+    "fields": {
+      "run": 1,
+      "distance_m": 1690,
+      "pressure_bar": 40.98,
+      "temperature_c": 16.4,
+      "anomaly": false,
+      "baseline_mean": 40.92,
+      "baseline_std": 0.2785110788687444
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 340,
+    "fields": {
+      "run": 1,
+      "distance_m": 1695,
+      "pressure_bar": 40.81,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 40.929,
+      "baseline_std": 0.277335062410265
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 341,
+    "fields": {
+      "run": 1,
+      "distance_m": 1700,
+      "pressure_bar": 49.45,
+      "temperature_c": 16.3,
+      "anomaly": true,
+      "baseline_mean": 40.9125,
+      "baseline_std": 0.27391652589410337
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 342,
+    "fields": {
+      "run": 1,
+      "distance_m": 1705,
+      "pressure_bar": 40.72,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 41.338,
+      "baseline_std": 1.928903697358739
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 343,
+    "fields": {
+      "run": 1,
+      "distance_m": 1710,
+      "pressure_bar": 40.78,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 41.312,
+      "baseline_std": 1.933792564938269
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 344,
+    "fields": {
+      "run": 1,
+      "distance_m": 1715,
+      "pressure_bar": 40.74,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.301,
+      "baseline_std": 1.9362848311569307
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 345,
+    "fields": {
+      "run": 1,
+      "distance_m": 1720,
+      "pressure_bar": 41.28,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 41.310500000000005,
+      "baseline_std": 1.9328693560011818
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 346,
+    "fields": {
+      "run": 1,
+      "distance_m": 1725,
+      "pressure_bar": 41.39,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 41.3235,
+      "baseline_std": 1.931686677764444
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 347,
+    "fields": {
+      "run": 1,
+      "distance_m": 1730,
+      "pressure_bar": 41.26,
+      "temperature_c": 16.2,
+      "anomaly": false,
+      "baseline_mean": 41.348,
+      "baseline_std": 1.9291383405142586
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 348,
+    "fields": {
+      "run": 1,
+      "distance_m": 1735,
+      "pressure_bar": 41.24,
+      "temperature_c": 16.9,
+      "anomaly": false,
+      "baseline_mean": 41.364,
+      "baseline_std": 1.9269020678143898
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 349,
+    "fields": {
+      "run": 1,
+      "distance_m": 1740,
+      "pressure_bar": 41.1,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.4005,
+      "baseline_std": 1.916761179973299
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 350,
+    "fields": {
+      "run": 1,
+      "distance_m": 1745,
+      "pressure_bar": 41.71,
+      "temperature_c": 16.5,
+      "anomaly": false,
+      "baseline_mean": 41.4425,
+      "baseline_std": 1.8995813250625302
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 351,
+    "fields": {
+      "run": 1,
+      "distance_m": 1750,
+      "pressure_bar": 41.2,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 41.467,
+      "baseline_std": 1.89972047805377
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 352,
+    "fields": {
+      "run": 1,
+      "distance_m": 1755,
+      "pressure_bar": 41.73,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 41.4975,
+      "baseline_std": 1.8897698968810719
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 353,
+    "fields": {
+      "run": 1,
+      "distance_m": 1760,
+      "pressure_bar": 41.28,
+      "temperature_c": 16.9,
+      "anomaly": false,
+      "baseline_mean": 41.5385,
+      "baseline_std": 1.885242620153201
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 354,
+    "fields": {
+      "run": 1,
+      "distance_m": 1765,
+      "pressure_bar": 42.17,
+      "temperature_c": 17.1,
+      "anomaly": false,
+      "baseline_mean": 41.5505,
+      "baseline_std": 1.8826646150155317
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 355,
+    "fields": {
+      "run": 1,
+      "distance_m": 1770,
+      "pressure_bar": 41.67,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.6145,
+      "baseline_std": 1.880785040460779
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 356,
+    "fields": {
+      "run": 1,
+      "distance_m": 1775,
+      "pressure_bar": 42.78,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.644,
+      "baseline_std": 1.8765825602043624
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 357,
+    "fields": {
+      "run": 1,
+      "distance_m": 1780,
+      "pressure_bar": 41.36,
+      "temperature_c": 16.3,
+      "anomaly": false,
+      "baseline_mean": 41.712,
+      "baseline_std": 1.8926105613258388
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 358,
+    "fields": {
+      "run": 1,
+      "distance_m": 1785,
+      "pressure_bar": 42.08,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 41.7395,
+      "baseline_std": 1.8827848215371104
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 359,
+    "fields": {
+      "run": 1,
+      "distance_m": 1790,
+      "pressure_bar": 41.03,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 41.786500000000004,
+      "baseline_std": 1.8787601594780818
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 360,
+    "fields": {
+      "run": 1,
+      "distance_m": 1795,
+      "pressure_bar": 41.75,
+      "temperature_c": 16.4,
+      "anomaly": false,
+      "baseline_mean": 41.789,
+      "baseline_std": 1.8776634416209954
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 361,
+    "fields": {
+      "run": 1,
+      "distance_m": 1800,
+      "pressure_bar": 41.15,
+      "temperature_c": 16.2,
+      "anomaly": false,
+      "baseline_mean": 41.836,
+      "baseline_std": 1.863580029490494
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 362,
+    "fields": {
+      "run": 1,
+      "distance_m": 1805,
+      "pressure_bar": 41.45,
+      "temperature_c": 16.5,
+      "anomaly": false,
+      "baseline_mean": 41.421,
+      "baseline_std": 0.5149747055617595
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 363,
+    "fields": {
+      "run": 1,
+      "distance_m": 1810,
+      "pressure_bar": 41.45,
+      "temperature_c": 16.8,
+      "anomaly": false,
+      "baseline_mean": 41.457499999999996,
+      "baseline_std": 0.4878295107708707
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 364,
+    "fields": {
+      "run": 1,
+      "distance_m": 1815,
+      "pressure_bar": 41.32,
+      "temperature_c": 15.8,
+      "anomaly": false,
+      "baseline_mean": 41.491,
+      "baseline_std": 0.46113019054446946
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 365,
+    "fields": {
+      "run": 1,
+      "distance_m": 1820,
+      "pressure_bar": 41.42,
+      "temperature_c": 17.0,
+      "anomaly": false,
+      "baseline_mean": 41.519999999999996,
+      "baseline_std": 0.42849798869515054
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 366,
+    "fields": {
+      "run": 1,
+      "distance_m": 1825,
+      "pressure_bar": 41.5,
+      "temperature_c": 17.4,
+      "anomaly": false,
+      "baseline_mean": 41.527,
+      "baseline_std": 0.4255040354808943
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 367,
+    "fields": {
+      "run": 1,
+      "distance_m": 1830,
+      "pressure_bar": 41.9,
+      "temperature_c": 15.9,
+      "anomaly": false,
+      "baseline_mean": 41.5325,
+      "baseline_std": 0.42434934714342676
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 368,
+    "fields": {
+      "run": 1,
+      "distance_m": 1835,
+      "pressure_bar": 41.46,
+      "temperature_c": 16.5,
+      "anomaly": false,
+      "baseline_mean": 41.564499999999995,
+      "baseline_std": 0.42684244597299625
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 369,
+    "fields": {
+      "run": 1,
+      "distance_m": 1840,
+      "pressure_bar": 41.36,
+      "temperature_c": 17.3,
+      "anomaly": false,
+      "baseline_mean": 41.5755,
+      "baseline_std": 0.4208321955864416
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 370,
+    "fields": {
+      "run": 1,
+      "distance_m": 1845,
+      "pressure_bar": 41.45,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 41.588499999999996,
+      "baseline_std": 0.40922616318067784
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 371,
+    "fields": {
+      "run": 1,
+      "distance_m": 1850,
+      "pressure_bar": 42.34,
+      "temperature_c": 16.3,
+      "anomaly": false,
+      "baseline_mean": 41.5755,
+      "baseline_std": 0.4092930361900676
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 372,
+    "fields": {
+      "run": 1,
+      "distance_m": 1855,
+      "pressure_bar": 41.5,
+      "temperature_c": 16.2,
+      "anomaly": false,
+      "baseline_mean": 41.6325,
+      "baseline_std": 0.4329443260670872
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 373,
+    "fields": {
+      "run": 1,
+      "distance_m": 1860,
+      "pressure_bar": 42.0,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 41.621,
+      "baseline_std": 0.43327273530409793
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 374,
+    "fields": {
+      "run": 1,
+      "distance_m": 1865,
+      "pressure_bar": 41.92,
+      "temperature_c": 15.8,
+      "anomaly": false,
+      "baseline_mean": 41.657,
+      "baseline_std": 0.43336018810174415
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 375,
+    "fields": {
+      "run": 1,
+      "distance_m": 1870,
+      "pressure_bar": 41.94,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 41.6445,
+      "baseline_std": 0.421219720136153
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 376,
+    "fields": {
+      "run": 1,
+      "distance_m": 1875,
+      "pressure_bar": 41.19,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 41.658,
+      "baseline_std": 0.42637517455133833
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 377,
+    "fields": {
+      "run": 1,
+      "distance_m": 1880,
+      "pressure_bar": 41.47,
+      "temperature_c": 16.5,
+      "anomaly": false,
+      "baseline_mean": 41.578500000000005,
+      "baseline_std": 0.3470063703343667
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 378,
+    "fields": {
+      "run": 1,
+      "distance_m": 1885,
+      "pressure_bar": 42.68,
+      "temperature_c": 17.0,
+      "anomaly": true,
+      "baseline_mean": 41.584,
+      "baseline_std": 0.344221470934966
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 379,
+    "fields": {
+      "run": 1,
+      "distance_m": 1890,
+      "pressure_bar": 41.82,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.614,
+      "baseline_std": 0.40965197038718776
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 380,
+    "fields": {
+      "run": 1,
+      "distance_m": 1895,
+      "pressure_bar": 42.29,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 41.6535,
+      "baseline_std": 0.3878859707643338
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 381,
+    "fields": {
+      "run": 1,
+      "distance_m": 1900,
+      "pressure_bar": 41.93,
+      "temperature_c": 16.2,
+      "anomaly": false,
+      "baseline_mean": 41.6805,
+      "baseline_std": 0.41294162962056064
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 382,
+    "fields": {
+      "run": 1,
+      "distance_m": 1905,
+      "pressure_bar": 42.87,
+      "temperature_c": 16.2,
+      "anomaly": true,
+      "baseline_mean": 41.7195,
+      "baseline_std": 0.3967164571434124
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 383,
+    "fields": {
+      "run": 1,
+      "distance_m": 1910,
+      "pressure_bar": 41.96,
+      "temperature_c": 16.3,
+      "anomaly": false,
+      "baseline_mean": 41.790499999999994,
+      "baseline_std": 0.46681986833647504
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 384,
+    "fields": {
+      "run": 1,
+      "distance_m": 1915,
+      "pressure_bar": 42.35,
+      "temperature_c": 15.8,
+      "anomaly": false,
+      "baseline_mean": 41.816,
+      "baseline_std": 0.46113589731170734
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 385,
+    "fields": {
+      "run": 1,
+      "distance_m": 1920,
+      "pressure_bar": 42.09,
+      "temperature_c": 15.7,
+      "anomaly": false,
+      "baseline_mean": 41.8675,
+      "baseline_std": 0.4603416923158388
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 386,
+    "fields": {
+      "run": 1,
+      "distance_m": 1925,
+      "pressure_bar": 42.1,
+      "temperature_c": 16.9,
+      "anomaly": false,
+      "baseline_mean": 41.900999999999996,
+      "baseline_std": 0.4503320412411503
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 387,
+    "fields": {
+      "run": 1,
+      "distance_m": 1930,
+      "pressure_bar": 42.48,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 41.931,
+      "baseline_std": 0.4421228693236162
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 388,
+    "fields": {
+      "run": 1,
+      "distance_m": 1935,
+      "pressure_bar": 41.92,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 41.96,
+      "baseline_std": 0.4586937976471885
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 389,
+    "fields": {
+      "run": 1,
+      "distance_m": 1940,
+      "pressure_bar": 42.64,
+      "temperature_c": 15.9,
+      "anomaly": false,
+      "baseline_mean": 41.983,
+      "baseline_std": 0.44358705310706537
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 390,
+    "fields": {
+      "run": 1,
+      "distance_m": 1945,
+      "pressure_bar": 42.81,
+      "temperature_c": 15.6,
+      "anomaly": false,
+      "baseline_mean": 42.047000000000004,
+      "baseline_std": 0.44130309431572246
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 391,
+    "fields": {
+      "run": 1,
+      "distance_m": 1950,
+      "pressure_bar": 42.22,
+      "temperature_c": 16.8,
+      "anomaly": false,
+      "baseline_mean": 42.114999999999995,
+      "baseline_std": 0.44918054042304306
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 392,
+    "fields": {
+      "run": 1,
+      "distance_m": 1955,
+      "pressure_bar": 41.64,
+      "temperature_c": 16.6,
+      "anomaly": false,
+      "baseline_mean": 42.108999999999995,
+      "baseline_std": 0.4468120999162613
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 393,
+    "fields": {
+      "run": 1,
+      "distance_m": 1960,
+      "pressure_bar": 41.72,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 42.116,
+      "baseline_std": 0.43777427492884247
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 394,
+    "fields": {
+      "run": 1,
+      "distance_m": 1965,
+      "pressure_bar": 42.34,
+      "temperature_c": 16.4,
+      "anomaly": false,
+      "baseline_mean": 42.102,
+      "baseline_std": 0.44607764252189874
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 395,
+    "fields": {
+      "run": 1,
+      "distance_m": 1970,
+      "pressure_bar": 41.32,
+      "temperature_c": 15.3,
+      "anomaly": false,
+      "baseline_mean": 42.123000000000005,
+      "baseline_std": 0.44694400920967864
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 396,
+    "fields": {
+      "run": 1,
+      "distance_m": 1975,
+      "pressure_bar": 42.25,
+      "temperature_c": 16.1,
+      "anomaly": false,
+      "baseline_mean": 42.092,
+      "baseline_std": 0.48054355189010506
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 397,
+    "fields": {
+      "run": 1,
+      "distance_m": 1980,
+      "pressure_bar": 42.15,
+      "temperature_c": 16.0,
+      "anomaly": false,
+      "baseline_mean": 42.144999999999996,
+      "baseline_std": 0.43180770574046273
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 398,
+    "fields": {
+      "run": 1,
+      "distance_m": 1985,
+      "pressure_bar": 42.08,
+      "temperature_c": 15.9,
+      "anomaly": false,
+      "baseline_mean": 42.179,
+      "baseline_std": 0.40157453263766335
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 399,
+    "fields": {
+      "run": 1,
+      "distance_m": 1990,
+      "pressure_bar": 42.22,
+      "temperature_c": 16.2,
+      "anomaly": false,
+      "baseline_mean": 42.149,
+      "baseline_std": 0.3842134823246054
+    }
+  },
+  {
+    "model": "readings.reading",
+    "pk": 400,
+    "fields": {
+      "run": 1,
+      "distance_m": 1995,
+      "pressure_bar": 42.74,
+      "temperature_c": 16.7,
+      "anomaly": false,
+      "baseline_mean": 42.169,
+      "baseline_std": 0.3765200770490898
+    }
+  }
+]

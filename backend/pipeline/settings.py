@@ -11,28 +11,31 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SAMPLE_CSV_PATH = Path(
-    os.environ.get("SAMPLE_CSV_PATH", BASE_DIR.parent / "sensor_readings.csv")
-)
+# `dev` is the default so `python manage.py runserver` seeds the sample run.
+# Set DJANGO_ENV=production to skip that fixture.
+ENVIRONMENT = os.environ.get("DJANGO_ENV", "dev")
 
 # Tests build their own runs and assert on the empty state, so seeding is off
-# by default under `manage.py test`.
-LOAD_SAMPLE_ON_FIRST_REQUEST = os.environ.get(
-    "LOAD_SAMPLE_ON_FIRST_REQUEST", "0" if "test" in sys.argv else "1"
-) == "1"
+# under `manage.py test` even when ENVIRONMENT is still `dev`.
+LOAD_SAMPLE_FIXTURE = ENVIRONMENT == "dev" and "test" not in sys.argv
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "dev-only-not-a-secret")
-DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
+DEBUG = os.environ.get(
+    "DJANGO_DEBUG", "1" if ENVIRONMENT == "dev" else "0"
+) == "1"
 ALLOWED_HOSTS = os.environ.get(
     "DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1,[::1]"
 ).split(",")
 
 # No auth, admin or sessions in this app, so contenttypes and friends are left
-# out. staticfiles stays because it serves DRF's browsable API.
+# out. staticfiles stays because it serves DRF's browsable API and Swagger UI.
 INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
+    "django_filters",
+    "drf_spectacular",
+    "drf_spectacular_sidecar",
     "readings",
 ]
 
@@ -43,7 +46,6 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "readings.middleware.SampleRunMiddleware",
 ]
 
 # No sessions and no cookies, so there is no CSRF surface to protect and
@@ -78,6 +80,20 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.AllowAny"],
     "UNAUTHENTICATED_USER": None,
     "EXCEPTION_HANDLER": "readings.exceptions.api_exception_handler",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Pipeline Readings API",
+    "DESCRIPTION": (
+        "Upload one inspection-run CSV, list its readings, and summarise "
+        "pressure statistics. Anomalies are flagged at upload time."
+    ),
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
+    "REDOC_DIST": "SIDECAR",
 }
 
 # csv_import enforces the same ceiling on the decoded body.
