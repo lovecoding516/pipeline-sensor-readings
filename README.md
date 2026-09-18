@@ -17,6 +17,18 @@ CSV replaces whatever run is loaded.
 
 ## Running it
 
+### Docker
+
+```bash
+docker compose up --build
+```
+
+Then open <http://localhost:5173>. The API is at <http://localhost:8000>, with Swagger at
+<http://localhost:8000/docs/>. Development is the default, so the sample fixture loads
+when the backend container starts.
+
+### Without Docker
+
 You need **Python 3.10+** and **Node 18+**. Two terminals, backend first.
 
 ### 1. Backend (http://127.0.0.1:8000)
@@ -276,7 +288,9 @@ reimplemented on `div`s.
 ## Project structure
 
 ```
+docker-compose.yml
 backend/
+  Dockerfile
   pipeline/            Django project: settings, urls, wsgi/asgi
   readings/
     anomaly.py         the statistical rule
@@ -291,6 +305,7 @@ backend/
       sample_run.json  the assignment's 400-reading sample, flags included
     tests/             80 tests
 frontend/
+  Dockerfile
   eslint.config.js     flat config: vue + typescript + prettier
   .prettierrc.json     formatting, incl. Tailwind class sorting
   src/
@@ -376,4 +391,4 @@ to walk through and modify any part of it on a call.
 
 ## Time spent
 
-_To be filled in before sending._
+8h
